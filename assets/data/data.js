@@ -1,12 +1,15 @@
 import portfolioIcon1 from "@/assets/icons/portfolio/dvago.png";
-import portfolioIcon2 from "@/assets/icons/portfolio/hustlenhola.png";
-import portfolioIcon3 from "@/assets/icons/portfolio/myvitaminstore.png";
+import portfolioIcon3 from "@/assets/icons/portfolio/hustlenhola.png";
+import portfolioIcon2 from "@/assets/icons/portfolio/myvitaminstore.png";
 import portfolioIcon4 from "@/assets/icons/portfolio/springs.png";
 
-import portfolioImage1 from "@/assets/images/portfolio/dvago-1.png";
-import portfolioImage2 from "@/assets/images/portfolio/hustlenhola-1.png";
-import portfolioImage3 from "@/assets/images/portfolio/myvitaminstore-1.png";
-import portfolioImage4 from "@/assets/images/portfolio/springs-1.png";
+import portfolioImage1 from "@/assets/images/portfolio/dvago-main.png";
+import portfolioImage2 from "@/assets/images/portfolio/myvitaminstore-main.png";
+import portfolioImage3 from "@/assets/images/portfolio/springs-main.png";
+
+import portfolioBgImage1 from "@/assets/images/portfolio/dvago-bg.png";
+import portfolioBgImage2 from "@/assets/images/portfolio/myvitaminstore-bg.png";
+import portfolioBgImage3 from "@/assets/images/portfolio/springs-bg.png";
 
 import java from "@/assets/icons/tools/java.png";
 import android from "@/assets/icons/tools/android.png";
@@ -54,34 +57,117 @@ import serviceIconBlockchain from "@/assets/icons/services/blockchain.png";
 import serviceIconEcommerce from "@/assets/icons/services/ecommerce.png";
 import serviceIconCloud from "@/assets/icons/services/cloud.png";
 
+import techSvgAndroid from "@/assets/icons/tools/svg/mobile/android.svg";
+import techSvgIOS from "@/assets/icons/tools/svg/mobile/ios.svg";
+import techSvgSwift from "@/assets/icons/tools/svg/mobile/swift.svg";
+import techSvgNative from "@/assets/icons/tools/svg/mobile/react-native.svg";
+import techSvgFlutter from "@/assets/icons/tools/svg/mobile/flutter.svg";
+
+import techSvgHTML from "@/assets/icons/tools/svg/frontend/html.svg";
+import techSvgCSS from "@/assets/icons/tools/svg/frontend/css3.svg";
+import techSvgBootstrap from "@/assets/icons/tools/svg/frontend/bootstrap.svg";
+import techSvgTailwind from "@/assets/icons/tools/svg/frontend/tailwind.svg";
+import techSvgMaterial from "@/assets/icons/tools/svg/frontend/material-ui.svg";
+import techSvgAnt from "@/assets/icons/tools/svg/frontend/ant-design.svg";
+import techSvgJavascript from "@/assets/icons/tools/svg/frontend/javascript.svg";
+import techSvgTypescript from "@/assets/icons/tools/svg/frontend/typescript.svg";
+import techSvgReactJS from "@/assets/icons/tools/svg/frontend/react-js.svg";
+import techSvgNextJS from "@/assets/icons/tools/svg/frontend/next-js.svg";
+import techSvgVue from "@/assets/icons/tools/svg/frontend/vue.svg";
+
+import techSvgNode from "@/assets/icons/tools/svg/backend/node-js.svg";
+import techSvgExpress from "@/assets/icons/tools/svg/backend/express.svg";
+import techSvgJava from "@/assets/icons/tools/svg/backend/java.svg";
+import techSvgSpring from "@/assets/icons/tools/svg/backend/spring-boot.svg";
+import techSvgHibernate from "@/assets/icons/tools/svg/backend/hibernate.svg";
+import techSvgPython from "@/assets/icons/tools/svg/backend/python.svg";
+import techSvgPhp from "@/assets/icons/tools/svg/backend/php.svg";
+import techSvgLaravel from "@/assets/icons/tools/svg/backend/laravel.svg";
+
+import techSvgMongo from "@/assets/icons/tools/svg/database/mongo.svg";
+import techSvgFirebase from "@/assets/icons/tools/svg/database/firebase.svg";
+import techSvgMysql from "@/assets/icons/tools/svg/database/mysql.svg";
+import techSvgPostgres from "@/assets/icons/tools/svg/database/postgres.svg";
+
+import techSvgWordpress from "@/assets/icons/tools/svg/cms/wordpress.svg";
+import techSvgShopify from "@/assets/icons/tools/svg/cms/shopify.svg";
+
+import techSvgKeras from "@/assets/icons/tools/svg/ai/keras.svg";
+import techSvgPytorch from "@/assets/icons/tools/svg/ai/pytorch.svg";
+import techSvgTensorflow from "@/assets/icons/tools/svg/ai/tensorflow.svg";
+
+import techSvgApache from "@/assets/icons/tools/svg/data-science/apache-spark.svg";
+import techSvgSnowflake from "@/assets/icons/tools/svg/data-science/snowflake.svg";
+import techSvgTableau from "@/assets/icons/tools/svg/data-science/tableau.svg";
+
+import techSvgAWS from "@/assets/icons/tools/svg/cloud/aws.svg";
+import techSvgGCloud from "@/assets/icons/tools/svg/cloud/google-cloud.svg";
+import techSvgAzure from "@/assets/icons/tools/svg/cloud/azure.svg";
+import techSvgDocker from "@/assets/icons/tools/svg/cloud/docker.svg";
+import techSvgKubernetes from "@/assets/icons/tools/svg/cloud/kubernetes.svg";
+import techSvgGithub from "@/assets/icons/tools/svg/cloud/github.svg";
+import techSvgRedis from "@/assets/icons/tools/svg/cloud/redis.svg";
+
+import techSvgSolidity from "@/assets/icons/tools/svg/blockchain/light-solidity.svg";
+import techSvgEthereum from "@/assets/icons/tools/svg/blockchain/ethereum.svg";
+
 export const portfolio = [
   {
     id: 1,
     name: "Dvago",
-    icon: portfolioIcon1,
     image: portfolioImage1,
-    tags: ["Next.JS", "Node.JS"],
+    icon: portfolioIcon1,
+    tags: [
+      { name: "Next.JS", image: nextjs },
+      { name: "Node.JS", image: nodejs },
+    ],
+    features: [
+      "Appealing Web Design",
+      "Multiple payment options",
+      "Extensive Search and Filter",
+    ],
+    description:
+      "adipisicing elit. Non in suscipit perspiciatis sequi, blanditiis ipsum excepturi. Molestiae praesentium aut quam laboriosam dolorum porro maxime nesciunt perspiciatis optio ipsam, quas iure.",
+    width: "w-28",
+    gradient: "bg-green-500",
+    bgImage: portfolioBgImage1,
   },
   {
     id: 2,
     name: "My Vitamin Store",
-    icon: portfolioIcon3,
-    image: portfolioImage3,
-    tags: ["Shopify"],
+    image: portfolioImage2,
+    icon: portfolioIcon2,
+    tags: [{ name: "Shopify", image: shopify }],
+    features: [
+      "Online Chat Box",
+      "Multiple payment options",
+      "High-Quality Images",
+      "Personalized Search and Recommendations",
+    ],
+    description:
+      "My Vitamin Store is a fast growing chain of Natural Health Stores retailing leading local and international brands of Vitamins, Supplements, Sports Nutrition and other natural products for Personal and Home Care. We are committed to providing the highest quality products possible, educating people on the safe and effective use of these products, and inspiring a love for wholesome, healthy living.",
+
+    width: "w-28",
+    gradient: "bg-teal-500",
+    bgImage: portfolioBgImage2,
   },
   {
     id: 3,
-    name: "Hustle N Hola",
-    icon: portfolioIcon2,
-    image: portfolioImage2,
-    tags: ["Shopify"],
-  },
-  {
-    id: 4,
     name: "Springs",
+    image: portfolioImage3,
     icon: portfolioIcon4,
-    image: portfolioImage4,
-    tags: ["React.JS", "Node.JS"],
+    tags: [{ name: "Shopify", image: shopify }],
+    features: [
+      "Visually Appealing Website Design",
+      "Online Chat Box",
+      "Personalized Recommendation",
+      "Seo Optimized Product Description",
+    ],
+    description:
+      "Springs Store (Pvt) Ltd. has been dedicated to providing their customers with the best possible experience any departmental store in Karachi has to offer. Springs has always taken pride in the large variety of imported and local goods we have to offer, the quality and cleanliness of our goods and stores, and providing the best possible value to our customers",
+    width: "w-24",
+    gradient: "bg-stone-500",
+    bgImage: portfolioBgImage3,
   },
 ];
 
@@ -225,4 +311,257 @@ export const services = [
   //       { name: "Figma", image: figma },
   //     ],
   //   },
+];
+
+export const technologies = [
+  {
+    name: "Android",
+    image: techSvgAndroid,
+    type: "Mobile",
+  },
+  {
+    name: "iOS",
+    image: techSvgIOS,
+    type: "Mobile",
+  },
+  {
+    name: "React Native",
+    image: techSvgNative,
+    type: "Mobile",
+  },
+  {
+    name: "Flutter",
+    image: techSvgFlutter,
+    type: "Mobile",
+  },
+  {
+    name: "Swift",
+    image: techSvgSwift,
+    type: "Mobile",
+  },
+  {
+    name: "HTML",
+    image: techSvgHTML,
+    type: "Frontend",
+  },
+  {
+    name: "CSS3",
+    image: techSvgCSS,
+    type: "Frontend",
+  },
+  {
+    name: "Bootstrap",
+    image: techSvgBootstrap,
+    type: "Frontend",
+  },
+  {
+    name: "Tailwind CSS",
+    image: techSvgTailwind,
+    type: "Frontend",
+  },
+  {
+    name: "Material UI",
+    image: techSvgMaterial,
+    type: "Frontend",
+  },
+  {
+    name: "Ant Design",
+    image: techSvgAnt,
+    type: "Frontend",
+  },
+  {
+    name: "JavaScript",
+    image: techSvgJavascript,
+    type: "Frontend",
+  },
+  {
+    name: "TypeScript",
+    image: techSvgTypescript,
+    type: "Frontend",
+  },
+  {
+    name: "React.JS",
+    image: techSvgReactJS,
+    type: "Frontend",
+  },
+  {
+    name: "Next.JS",
+    image: techSvgNextJS,
+    type: "Frontend",
+  },
+  {
+    name: "Vue.JS",
+    image: techSvgVue,
+    type: "Frontend",
+  },
+  {
+    name: "Node.JS",
+    image: techSvgNode,
+    type: "Backend",
+  },
+  {
+    name: "Express.JS",
+    image: techSvgExpress,
+    type: "Backend",
+  },
+  {
+    name: "Java",
+    image: techSvgJava,
+    type: "Backend",
+  },
+  {
+    name: "Spring Boot",
+    image: techSvgSpring,
+    type: "Backend",
+  },
+  {
+    name: "Hibernate",
+    image: techSvgHibernate,
+    type: "Backend",
+  },
+  {
+    name: "Python",
+    image: techSvgPython,
+    type: "Backend",
+  },
+  {
+    name: "PHP",
+    image: techSvgPhp,
+    type: "Backend",
+  },
+  {
+    name: "Laravel",
+    image: techSvgLaravel,
+    type: "Backend",
+  },
+  {
+    name: "Mongo DB",
+    image: techSvgMongo,
+    type: "Database",
+  },
+  {
+    name: "MySQL",
+    image: techSvgMysql,
+    type: "Database",
+  },
+  {
+    name: "Postgres",
+    image: techSvgPostgres,
+    type: "Database",
+  },
+  {
+    name: "Firebase",
+    image: techSvgFirebase,
+    type: "Database",
+  },
+  {
+    name: "WordPress",
+    image: techSvgWordpress,
+    type: "CMS",
+  },
+  {
+    name: "Shopify",
+    image: techSvgShopify,
+    type: "CMS",
+  },
+  {
+    name: "Shopify OS",
+    image: techSvgShopify,
+    type: "CMS",
+  },
+  {
+    name: "Shopify Polaris",
+    image: techSvgShopify,
+    type: "CMS",
+  },
+  {
+    name: "Python",
+    image: techSvgPython,
+    type: "AI/ML",
+  },
+  {
+    name: "Keras",
+    image: techSvgKeras,
+    type: "AI/ML",
+  },
+  {
+    name: "PyTorch",
+    image: techSvgPytorch,
+    type: "AI/ML",
+  },
+  {
+    name: "TensorFlow",
+    image: techSvgTensorflow,
+    type: "AI/ML",
+  },
+  {
+    name: "Python",
+    image: techSvgPython,
+    type: "Data Science",
+  },
+  {
+    name: "Apache Spark",
+    image: techSvgApache,
+    type: "Data Science",
+  },
+  {
+    name: "SnowFlake",
+    image: techSvgSnowflake,
+    type: "Data Science",
+  },
+  {
+    name: "Tableau",
+    image: techSvgTableau,
+    type: "Data Science",
+  },
+  {
+    name: "AWS",
+    image: techSvgAWS,
+    type: "Cloud",
+  },
+  {
+    name: "Azure",
+    image: techSvgAzure,
+    type: "Cloud",
+  },
+  {
+    name: "Google Cloud",
+    image: techSvgGCloud,
+    type: "Cloud",
+  },
+  {
+    name: "Kubernetes",
+    image: techSvgKubernetes,
+    type: "Cloud",
+  },
+  {
+    name: "Redis",
+    image: techSvgRedis,
+    type: "Cloud",
+  },
+  {
+    name: "Web3",
+    image: web3,
+    type: "Blockchain",
+  },
+  {
+    name: "Solidity",
+    image: techSvgSolidity,
+    type: "Blockchain",
+  },
+  {
+    name: "Ethereum",
+    image: techSvgEthereum,
+    type: "Blockchain",
+  },
+  {
+    name: "Node.JS",
+    image: techSvgNode,
+    type: "Blockchain",
+  },
+  {
+    name: "Python",
+    image: techSvgPython,
+    type: "Blockchain",
+  },
 ];

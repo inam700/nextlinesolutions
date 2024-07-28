@@ -2,39 +2,56 @@
 import { portfolio } from "@/assets/data/data";
 import Image from "next/image";
 import React from "react";
-import { BsArrowRight } from "react-icons/bs";
 
 const Portfolio = () => {
   return (
     <div className="p-20">
       <p className="text-6xl font-bold mb-20">Recent Work</p>
-      <div className="grid grid-cols-4 gap-5">
-        {portfolio.map((item) => (
+      {portfolio.map((item) => (
+        <div className={`grid grid-cols-2`} key={item.id}>
           <div
-            key={item.id}
-            className="cursor-pointer rounded-lg shadow hover:shadow-md h-64 border-2 p-3 relative flex justify-center"
+            className={`${
+              item.id === 1
+                ? "bg-gradient-to-r from-green-100 to-white-50"
+                : item.id === 2
+                ? "bg-gradient-to-l from-teal-100 to-white-50"
+                : "bg-gradient-to-r from-red-100 to-white-50"
+            } h-full w-full relative ${item.id % 2 === 0 && "order-last"}`}
           >
-            <div className="mt-16">
-              <Image
-                src={item.icon}
-                alt="portfolio"
-                className={`${item.id === 2 && "w-60"}`}
-              />
-            </div>
-            <div className="flex gap-2 absolute bottom-0 left-0 ms-7 mb-5">
-              {item.tags?.map((tag) => (
-                <p className="text-xs font-semibold border rounded-full px-3 py-1">
-                  {tag}
-                </p>
+            {/* <Image
+              src={item.bgImage}
+              className="absolute h-full w-full bg-cover bg-no-repeat opacity-30"
+            /> */}
+            <Image src={item.image} alt="portfolio" className="relative" />
+          </div>
+          <div className="p-10">
+            <Image
+              src={item.icon}
+              alt="portfolio"
+              className={`my-3 ${item.width}`}
+            />
+            <p className="font-light mb-5">{item.description}</p>
+
+            <p className="text-xl font-bold mb-1">Key features</p>
+            <ul className="font-light mb-5 list-disc px-5">
+              {item.features.map((feature, featureIndex) => (
+                <li key={featureIndex}>{feature}</li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-3">
+              {item.tags.map((tag, tagIndex) => (
+                <div
+                  className="border rounded-lg shadow hover:shadow-md px-5 py-4"
+                  key={tagIndex}
+                >
+                  <Image src={tag.image} alt="tech" className="w-14 mb-3" />
+                  <p className="text-xs font-bold">{tag.name}</p>
+                </div>
               ))}
             </div>
-            <BsArrowRight
-              size={25}
-              className="absolute right-0 bottom-0 me-7 mb-5"
-            />
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

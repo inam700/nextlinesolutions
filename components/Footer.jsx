@@ -4,6 +4,7 @@ import brand from "@/assets/icons/brand.png";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";
 import { linkHover } from "@/Utils/Utils";
+import NavLink from "./NavLink";
 
 const Footer = () => {
   return (
@@ -33,18 +34,11 @@ const Footer = () => {
           </button>
           <div className="flex items-end gap-20">
             <div className="flex gap-10">
-              <Link href={"/"} className={`${linkHover}`}>
-                Services
-              </Link>
-              <Link href={"/"} className={`${linkHover}`}>
-                Recent Work
-              </Link>
-              <Link href={"/"} className={`${linkHover}`}>
-                About
-              </Link>
-              <Link href={"/"} className={`${linkHover}`}>
-                Contact
-              </Link>
+              {["Services", "Portfolio", "About Us", "Contact Us"].map(
+                (item, index) => (
+                  <NavLink type="footer" text={item} key={index} link={"/"} />
+                )
+              )}
             </div>
 
             <div>

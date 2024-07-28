@@ -7,6 +7,7 @@ import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { linkHover } from "@/Utils/Utils";
+import NavLink from "../NavLink";
 
 const Showcase = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,17 +45,19 @@ const Showcase = () => {
             </button>
           </div>
           <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-            <Link href="/" className={`font-semibold leading-6 ${linkHover}`}>
-              Services
-            </Link>
-            <Link href="/" className={`font-semibold leading-6 ${linkHover}`}>
-              Recent Work
-            </Link>
+            <NavLink type={"navbar"} link="/" text="Services" />
+            <NavLink type={"navbar"} link="/" text="Portfolio" />
           </PopoverGroup>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="/" className={`font-semibold leading-6 ${linkHover}`}>
-              Contact us <span aria-hidden="true">&rarr;</span>
-            </Link>
+            <NavLink
+              type={"navbar"}
+              link="/"
+              text={
+                <>
+                  Contact us <span aria-hidden="true">&rarr;</span>
+                </>
+              }
+            />
           </div>
         </nav>
         <Dialog
@@ -117,6 +120,14 @@ const Showcase = () => {
         <p className="text-5xl font-bold mb-5">Turning</p>
         <p className="text-5xl font-bold mb-5">Ideas into Code</p>
         <p className="text-5xl font-bold mb-5">Innovation into Reality</p>
+        <p className="text-2xl font-thin">
+          Your vision, our expertise. We don't just build software, we craft
+          comprehensive solutions.
+        </p>
+        <p className="text-2xl font-thin">
+          From innovative custom applications to streamlined enterprise systems,
+          we transform your vision into a digital reality.
+        </p>
         <button
           type="button"
           className="outline-none px-10 py-3 mt-5 rounded bg-slate-200 text-gray-900 before:ease relative overflow-hidden border transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-slate-600 before:opacity-10 before:duration-700 hover:shadow-slate-800 hover:before:-translate-x-40"

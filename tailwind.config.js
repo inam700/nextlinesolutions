@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         primaryBG: "#433751",
         logoColorPrimary: "#F27380",
-        logoColorSecondary: "#F0E3E3",
+        logoColorSecondary: "#f55f6f",
       },
     },
   },

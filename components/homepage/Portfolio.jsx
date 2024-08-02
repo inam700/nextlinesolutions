@@ -1,57 +1,85 @@
-"use client";
-import { portfolio } from "@/assets/data/data";
+import { portfolio } from "@/assets/data/portfolio";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Portfolio = () => {
   return (
-    <div className="p-20">
-      <p className="text-6xl font-bold mb-20">Recent Work</p>
-      {portfolio.map((item) => (
-        <div className={`grid grid-cols-2`} key={item.id}>
-          <div
-            className={`${
-              item.id === 1
-                ? "bg-gradient-to-r from-green-100 to-white-50"
-                : item.id === 2
-                ? "bg-gradient-to-l from-teal-100 to-white-50"
-                : "bg-gradient-to-r from-red-100 to-white-50"
-            } h-full w-full relative ${item.id % 2 === 0 && "order-last"}`}
-          >
-            {/* <Image
-              src={item.bgImage}
-              className="absolute h-full w-full bg-cover bg-no-repeat opacity-30"
-            /> */}
-            <Image src={item.image} alt="portfolio" className="relative" />
-          </div>
-          <div className="p-10">
-            <Image
-              src={item.icon}
-              alt="portfolio"
-              className={`my-3 ${item.width}`}
-            />
-            <p className="font-light mb-5">{item.description}</p>
-
-            <p className="text-xl font-bold mb-1">Key features</p>
-            <ul className="font-light mb-5 list-disc px-5">
-              {item.features.map((feature, featureIndex) => (
-                <li key={featureIndex}>{feature}</li>
-              ))}
-            </ul>
-            <div className="flex flex-wrap gap-3">
-              {item.tags.map((tag, tagIndex) => (
-                <div
-                  className="border rounded-lg shadow hover:shadow-md px-5 py-4"
-                  key={tagIndex}
-                >
-                  <Image src={tag.image} alt="tech" className="w-14 mb-3" />
-                  <p className="text-xs font-bold">{tag.name}</p>
-                </div>
-              ))}
-            </div>
+    <div className="p-20 relative">
+      <div className="flex justify-between mb-20">
+        <div>
+          <p className="text-4xl font-extrabold">
+            Featured <b className="text-logoColorPrimary"> Projects</b>
+          </p>
+          <p className="text-lg mt-3">
+            We build success through client-focused solutions, innovation, and
+            results.
+          </p>
+        </div>
+        <div>
+          <div className="flex items-center px-5 py-2 bg-logoColorPrimary text-white rounded-full cursor-pointer">
+            <button className="me-3 text-sm">View All</button>{" "}
+            <FaArrowRightLong />{" "}
           </div>
         </div>
-      ))}
+      </div>
+      <div className="grid grid-cols-3 gap-10">
+        {portfolio
+          .filter((item) => item.featured)
+          .map((item, index) => (
+            <div
+              key={index}
+              className={`relative shadow-md p-10 flex flex-col justify-between  ${
+                index === 0
+                  ? "hover:bg-gradient-to-r hover:from-indigo-100 hover:to-white-50 transition-all hover:shadow-xl hover:scale-105"
+                  : index === 1
+                  ? "hover:bg-gradient-to-r hover:from-green-100 hover:to-white-50 transition-all hover:shadow-xl hover:scale-105"
+                  : index === 2
+                  ? "hover:bg-gradient-to-r hover:from-blue-100 hover:to-white-50 transition-all hover:shadow-xl hover:scale-105"
+                  : index === 3
+                  ? "hover:bg-gradient-to-r hover:from-yellow-100 hover:to-white-50 transition-all hover:shadow-xl hover:scale-105"
+                  : index === 4
+                  ? "hover:bg-gradient-to-r hover:from-stone-100 hover:to-white-50 transition-all hover:shadow-xl hover:scale-105"
+                  : index === 5 &&
+                    "hover:bg-gradient-to-r hover:from-red-100 hover:to-white-50 transition-all hover:shadow-xl hover:scale-105"
+              }`}
+            >
+              <div>
+                <div className="flex items-center gap-5 mb-20">
+                  <Image
+                    src={item.icon}
+                    alt="portfolio"
+                    className={`relative w-20`}
+                  />
+                  <div>
+                    <p className="font-bold text-lg mb-1">{item.name}</p>
+                    <p className="font-semibold text-xs ">{item.platform}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-10">
+                <Image
+                  src={item.image}
+                  alt="portfolio"
+                  className={`mb-16 ${
+                    index === 2
+                      ? "w-60"
+                      : index === 4 || index === 3
+                      ? "w-56"
+                      : "w-80"
+                  }`}
+                />
+                <Link
+                  href={"/portfolio"}
+                  className="absolute right-0 me-10 cursor-pointer p-3 rounded-full hover:bg-logoColorPrimary hover:text-white transition-all delay-75"
+                >
+                  <FaArrowRightLong className="" size={15} />
+                </Link>
+              </div>
+            </div>
+          ))}
+      </div>
     </div>
   );
 };

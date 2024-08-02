@@ -3,11 +3,11 @@ import React from "react";
 
 const NavLink = ({ type, text, link }) => {
   const linkHover =
-    "relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center";
+    "relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-logoColorPrimary after:w-full after:scale-x-0 after:hover:scale-x-110 after:transition after:duration-300 after:origin-center";
 
   if (type === "navbar")
     return (
-      <Link href={link} className={`font-semibold leading-6 ${linkHover}`}>
+      <Link href={link} className={`font-semibold py-2 leading-6 ${linkHover}`}>
         {text}
       </Link>
     );

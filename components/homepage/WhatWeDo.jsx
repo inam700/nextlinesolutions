@@ -1,40 +1,58 @@
-import { services } from "@/assets/data/data";
+import { services } from "@/assets/data/services";
 import Image from "next/image";
 import React from "react";
-import servicebg from "@/assets/icons/brand.png";
+import servicebg from "@/assets/images/service-bg-1.png";
 const WhatWeDo = () => {
   return (
-    <div className="p-20 bg-gray-900 relative">
-      <Image
-        src={servicebg}
-        alt="service-bg"
-        className="absolute w-4/6 right-0 bottom-0 overflow-hidden"
-        style={{ opacity: 0.03 }}
-      />
-      <p className="text-6xl font-bold mb-20 text-white">Our Services</p>
-      <div className="grid grid-cols-2 gap-10">
-        {services.map((item) => (
-          <div
-            key={item.id}
-            className="border-2 rounded shadow-md px-5 pt-5 pb-5 relative bg-slate-100 hover:bg-slate-50 transition-all duration-500"
-            // hover:scale-105
-          >
-            <div className="flex gap-5 items-center mb-7">
-              <div>
-                <Image src={item.icon} alt={"service"} className="w-10" />
-              </div>
-              <p className="text-xl font-bold">{item.name}</p>
-            </div>
-            <p className="text-lg font-thin mb-16">{item.description}</p>
-
-            <button
-              type="button"
-              className="text-xs rounded font-semibold absolute bottom-0 mb-5 bg-purple-100 px-4 py-2"
+    <div
+      style={{
+        backgroundColor: "#252033",
+      }}
+    >
+      <div className="p-20 relative">
+        <Image
+          src={servicebg}
+          alt="service-bg"
+          className="absolute top-0 left-0 overflow-hidden"
+        />
+        <Image
+          src={servicebg}
+          alt="service-bg"
+          className="absolute bottom-0 right-0 overflow-hidden rotate-180"
+        />
+        <p className="text-4xl font-extrabold text-center text-white">
+          Our <b className="text-logoColorPrimary"> Services</b>
+        </p>
+        <p className="text-lg mb-20 mt-3 text-white text-center">
+          Unleash your potential. Let's explore how we can help you succeed.
+        </p>
+        <div className="grid grid-cols-2 gap-10">
+          {services.map((item) => (
+            <div
+              key={item.id}
+              className="flex gap-5 border-2 shadow-md px-5 py-10 relative bg-slate-100 hover:bg-slate-50 transition-all duration-500"
+              // hover:scale-105
             >
-              Learn more
-            </button>
-          </div>
-        ))}
+              <div className="w-3/5">
+                <p className="text-lg font-bold mb-5">{item.name}</p>
+                <p className="text-sm mb-5 text-gray-600">{item.description}</p>
+                {/* <div className="flex flex-wrap gap-3">
+                  {item.techs.map((tech, techIndex) => (
+                    <div
+                      key={techIndex}
+                      className="text-xs font-bold px-3 py-1 bg-logoColorPrimary rounded-full text-white"
+                    >
+                      {tech.name}
+                    </div>
+                  ))}
+                </div> */}
+              </div>
+              <div className="w-2/5">
+                <Image src={item.image} className="w-56" />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

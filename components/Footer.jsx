@@ -1,23 +1,29 @@
 import Image from "next/image";
 import React from "react";
 import brand from "@/assets/icons/brand.png";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { FaEnvelope, FaFacebook, FaLinkedin, FaSkype } from "react-icons/fa6";
+import { FaMobileAlt } from "react-icons/fa";
+import { footerLinks } from "@/assets/data/footer";
+import servicebg from "@/assets/images/service-bg-1.png";
 import Link from "next/link";
-import { linkHover } from "@/Utils/Utils";
-import NavLink from "./NavLink";
 
 const Footer = () => {
   return (
     <div>
-      <div className="bg-gray-900 text-white p-20">
-        <div className="flex justify-between items-center mb-20">
-          <div className="">
-            <p className="text-4xl font-semibold mb-1">Ready to Elevate your</p>
-            <p className="text-6xl font-bold">Business?</p>
-          </div>
-          <div>
-            {/* <p className="text-lg font-bold mb-3">Let's Connect</p> */}
-            <div className="flex gap-3 items-center">
+      <div
+        className="text-white p-20 relative"
+        style={{
+          backgroundColor: "#252033",
+        }}
+      >
+        <Image
+          src={servicebg}
+          alt="service-bg"
+          className="absolute bottom-0 left-0 overflow-hidden -rotate-90 opacity-50 z-10"
+        />
+        <div className="flex gap-16">
+          <div className="z-20">
+            <Link href={"/"} className="flex gap-3 items-center mb-10 ">
               <div>
                 <Image src={brand} alt="brand" className={"w-14"} />
               </div>
@@ -25,49 +31,81 @@ const Footer = () => {
                 <p className="text-2xl font-bold tracking-widest">NEXTLINE</p>
                 <p className="text-2xl font-bold">SOLUTIONS</p>
               </div>
-            </div>
-          </div>
-        </div>{" "}
-        <div className="flex items-end justify-between">
-          <button className="px-5 py-3 rounded hover:before:bg-red border-white relative overflow-hidden border text-white transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:text-gray-900 hover:shadow-white hover:before:left-0 hover:before:w-full">
-            <span class="relative z-10">Contact us Now</span>
-          </button>
-          <div className="flex items-end gap-20">
-            <div className="flex gap-10">
-              {["Services", "Portfolio", "About Us", "Contact Us"].map(
-                (item, index) => (
-                  <NavLink type="footer" text={item} key={index} link={"/"} />
-                )
-              )}
+            </Link>
+            <p className="mb-5">
+              We're the dream team for digital innovation, <br /> building
+              amazing solutions that elevate your business.
+            </p>
+            <div className="flex items-center gap-5 mb-2">
+              <FaEnvelope size={25} className="text-logoColorPrimary" />
+              <p className="text-sm">contact@nextlinesolutions.com</p>
             </div>
 
-            <div>
-              <p className="text-lg font-bold">Email us:</p>
-              <a href="mailto:info@nextlinesolutions.com" className="text-sm">
-                info@nextlinesolutions.com
-              </a>
-              <div className="flex mt-3 gap-3">
-                <FaLinkedin
-                  className="hover:text-slate-400 cursor-pointer"
-                  size={20}
-                />
-                <FaFacebook
-                  className="hover:text-slate-400 cursor-pointer"
-                  size={20}
-                />
-                <FaInstagram
-                  className="hover:text-slate-400 cursor-pointer"
-                  size={20}
-                />
-              </div>
+            <div className="flex items-center gap-5 mb-2">
+              <FaMobileAlt size={25} className="text-logoColorPrimary" />
+              <p className="text-sm">+92 (334) 0041777</p>
             </div>
           </div>
+          {footerLinks.map((item) =>
+            item.title !== "Our Technologies" ? (
+              <div className="flex flex-col">
+                <p className="text-logoColorPrimary font-bold text-xl mb-5">
+                  {item.title}
+                </p>
+                {item.links.map((link) => (
+                  <Link
+                    href={link.href}
+                    className="font-thin mb-3 hover:text-logoColorPrimary transition-all"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div>
+                <p className="text-logoColorPrimary font-bold text-xl mb-5">
+                  {item.title}
+                </p>
+                <div className="flex gap-10">
+                  {item.links.map((link) => (
+                    <div className="flex flex-col">
+                      <p className="font-bold mb-3">{link.title}</p>
+                      {link.links.map((link) => (
+                        <Link
+                          href={link.href}
+                          className="font-thin mb-3 hover:text-logoColorPrimary transition-all"
+                        >
+                          {link.name}
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )
+          )}
         </div>
       </div>
-      <div className="py-4">
-        <p className="text-xs text-center">
-          {new Date().getFullYear()} © NextLine Solutions , All Rights Reserved{" "}
+      <div className="px-20 py-4 flex justify-between">
+        <p className="font-bold flex">
+          Copyrights ©{" "}
+          <p className="uppercase ms-1"> NextLine Solutions Private Limited</p>,
+          All Rights Reserved{" "}
         </p>
+        <div className="flex items-center gap-5">
+          <FaLinkedin
+            size={25}
+            className="cursor-pointer hover:text-logoColorPrimary transition-all"
+          />
+          <FaFacebook
+            size={25}
+            className="cursor-pointer hover:text-logoColorPrimary transition-all"
+          />
+          <FaSkype
+            size={25}
+            className="cursor-pointer hover:text-logoColorPrimary transition-all"
+          />
+        </div>
       </div>
     </div>
   );

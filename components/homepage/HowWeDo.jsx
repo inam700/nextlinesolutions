@@ -1,35 +1,40 @@
-import { approach } from "@/assets/data/data";
+import { approach } from "@/assets/data/approach";
 import React from "react";
+import AboutUs from "./About";
 
 const HowWeDo = () => {
   return (
-    <div className="py-20">
-      <div className="px-20">
-        <p className="mb-20 text-6xl font-bold">Our Approach</p>
-        <div className="grid grid-cols-3 gap-10">
-          {approach.map((item) => (
-            <div className="border-t-2 px-3 py-10 mb-5 relative" key={item.id}>
-              <p
-                className={`font-bold uppercase absolute top-0 right-0 me-20 opacity-5 ${
-                  item.step === "A" || item.step === "D"
-                    ? "-mt-12"
-                    : item.step === "B" || item.step === "E"
-                    ? "-mt-8"
-                    : item.step === "C" || item.step === "F"
-                    ? "-mt-4"
-                    : null
-                }`}
-                style={{ fontSize: "15rem" }}
+    <>
+      <div className="py-20">
+        <div className="px-20">
+          <p className="mb-3 text-4xl font-extrabold">
+            How we <span className="text-logoColorPrimary">Do</span>
+          </p>
+          <p className="mb-20">
+            Every project is a masterpiece built on a blueprint of brilliance.
+            Our transparent delivery process ensures <br /> consistency at every
+            stage, turning your vision into reality with precision and clarity.
+          </p>
+          <div className="grid grid-cols-3 gap-10">
+            {approach.map((item) => (
+              <div
+                className="px-10 h-full py-10 mb-5 shadow-lg hover:shadow-2xl rounded-md relative bg-gray-50"
+                key={item.id}
               >
-                {item.step}
-              </p>
-              <p className="text-4xl font-bold my-5">{item.name}</p>
-              <p className="text-lg font-thin">{item.description}</p>
-            </div>
-          ))}
+                <p
+                  className={`font-bold uppercase absolute bottom-0 right-0 me-10 text-logoColorPrimary opacity-15 `}
+                  style={{ fontSize: "15rem" }}
+                >
+                  {item.step}
+                </p>
+                <p className="text-2xl font-bold my-5">{item.name}</p>
+                <p className="">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

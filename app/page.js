@@ -1,6 +1,7 @@
 import AboutUs from "@/components/homepage/About";
+import Consultation from "@/components/homepage/Consultation";
 import Contact from "@/components/homepage/Contact";
-import HowWeDo from "@/components/homepage/HowWeDo";
+import Industries from "@/components/homepage/Industries";
 import Portfolio from "@/components/homepage/Portfolio";
 import Showcase from "@/components/homepage/Showcase";
 import Technologies from "@/components/homepage/Technologies";
@@ -11,10 +12,11 @@ const Homepage = () => {
     <>
       <Showcase />
       <AboutUs />
-      <HowWeDo />
       <WhatWeDo />
-      <Portfolio />
       <Technologies />
+      <Industries />
+      <Portfolio />
+      <Consultation />
       <Contact />
     </>
   );

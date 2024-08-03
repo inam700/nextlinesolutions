@@ -32,7 +32,7 @@ const PortfolioGradient = ({ item }) => {
 
   if (item.grid === 2)
     return (
-      <div className="col-span-2" key={item.name}>
+      <div className="col-span-2" key={item.id}>
         {/* Ensure each item gets a unique key for React */}
         <div
           className={`grid md:grid-cols-2 gap-10 border rounded-lg shadow-lg hover:shadow-xl px-10 py-12 bg-gradient-to-r ${boxShadow()}`}
@@ -70,7 +70,7 @@ const PortfolioGradient = ({ item }) => {
       </div>
     );
   return (
-    <div className="h-full">
+    <div className="h-full" key={item.id}>
       <div
         className={`h-full grid gap-20 border rounded-lg shadow-lg hover:shadow-xl px-10 py-12 bg-gradient-to-r ${boxShadow()}`}
       >

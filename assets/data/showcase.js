@@ -17,17 +17,24 @@ export const navbarData = [
       {
         typeName: "Design & Engineering",
         types: [
-          { href: "/services", name: "Web App Development" },
-          { href: "/services", name: "Mobile App Development" },
+          { href: "/services", name: "UI/UX Designs" },
+          { href: "/services", name: "Web Development" },
+          { href: "/services", name: "Mobile Development" },
+          { href: "/services", name: "PWA Development" },
+          { href: "/services", name: "Custom Software Development" },
+          { href: "/services", name: "MERN Stack Development" },
+          { href: "/services", name: "SaaS Development" },
+          { href: "/services", name: "MVP Development" },
         ],
       },
       {
         typeName: "Data & AI",
         types: [
+          { href: "/services", name: "Artificial Intelligence" },
+          { href: "/services", name: "Machine Learning" },
+          { href: "/services", name: "Generative AI" },
           { href: "/services", name: "Data Science" },
           { href: "/services", name: "Data Engineering" },
-          { href: "/services", name: "Generative AI" },
-          { href: "/services", name: "Machine Learning" },
         ],
       },
       {
@@ -35,6 +42,22 @@ export const navbarData = [
         types: [
           { href: "/services", name: "Shopify" },
           { href: "/services", name: "WordPress" },
+        ],
+      },
+      {
+        typeName: "Blockchain",
+        types: [
+          { href: "/services", name: "NFT Marketplace Development" },
+          { href: "/services", name: "DApp Development" },
+          { href: "/services", name: "Web3 Development" },
+        ],
+      },
+      {
+        typeName: "Cloud Services",
+        types: [
+          { href: "/services", name: "AWS" },
+          { href: "/services", name: "Google Cloud" },
+          { href: "/services", name: "Kubernetes" },
         ],
       },
     ],

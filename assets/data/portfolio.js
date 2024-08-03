@@ -83,7 +83,7 @@ export const portfolio = [
       { name: "Firebase", image: techSvgFirebase },
     ],
     description:
-      "At Gitcha, it’s not about sifting through homes that are for sale. For the first time ever, browse or post in a live feed where buyers and renters publicize exactly what they’re looking for. Needs and desires are declared openly, making it fast & easy for homeowners and their agents to find and connect with you directly.",
+      "we've flipped the script on house hunting. Forget endless scrolling through homes that aren't quite right. Join the live feed where buyers and renters like you shout out exactly what you're looking for.",
     featured: true,
     grid: 2,
     imageWidth: 96,
@@ -138,7 +138,7 @@ export const portfolio = [
       { name: "Firebase", image: techSvgFirebase },
     ],
     description:
-      "The world's popular platform for digital marketing training and building career in marketing, Acadium provides access to free apprenticeships, marketing coursed, job opportunities and certifications in digital marketing",
+      "Launchpad to a Thriving Career in Digital Marketing. Free apprenticeships, courses, job opportunities, and certifications—ignite your potential!",
     featured: true,
     grid: 2,
     imageWidth: 72,
@@ -153,7 +153,7 @@ export const portfolio = [
     icon: portfolioIcon6,
     tags: [{ name: "React Native", image: techSvgNative }],
     description:
-      "Offering a seamless shopping experience, Garsho, a fashion and lifestyle app, allows the purchasing and selling of fashion categories, like dresses, denim, t-shirts, etc, with ease of online payment and hassle-free shipping",
+      "Elevate your style, simplify your shopping. Your fashion and lifestyle companion, lets you effortlessly buy and sell trendy dresses, classic denim, iconic t-shirts, and more. Enjoy secure online payments and stress-free shipping – all in one stylish app.",
     featured: true,
     grid: 1,
     imageWidth: 56,
@@ -172,7 +172,7 @@ export const portfolio = [
       { name: "Tailwind CSS", image: techSvgTailwind },
     ],
     description:
-      "Offering users unique experiences with the trek, custom trips, and Himalayan studies, Roam Beyond is a travel website developed by Emizentech. The users can choose from group trips or self-guided trips.",
+      "Roam Beyond: Unleash your adventurous spirit in the Himalayas. Explore our curated group journeys, craft your own unique path, or delve into the cultural tapestry with our Himalayan studies program.",
     featured: false,
     grid: 1,
     imageWidth: 72,
@@ -180,7 +180,7 @@ export const portfolio = [
   },
   {
     id: 7,
-    name: "Chatbot for E-commerce Customer Service",
+    name: "Chatbot for Customer Service",
     platform: "Web, Mobile Responsive App",
     image: portfolioImage5,
     icon: portfolioIcon5,
@@ -192,7 +192,7 @@ export const portfolio = [
       { name: "Material UI", image: techSvgMaterial },
     ],
     description:
-      "Cozy App, a thriving e-commerce platform specializing in stylish and affordable furniture, aims to enhance its customer service through a state-of-the-art chatbot. This chatbot will assist customers with inquiries related to product details, order status, delivery tracking, and simple issue resolution.",
+      "Your one-stop shop for stylish and affordable furniture is getting even better! Cozy App is unveiling a smart new chatbot, making it easier than ever to get the information you need about our products, your orders, and more – right at your fingertips.",
     featured: true,
     grid: 1,
     imageWidth: 60,
@@ -206,7 +206,7 @@ export const portfolio = [
     icon: portfolioIcon3,
     tags: [{ name: "WordPress", image: techSvgWordpress }],
     description:
-      "Springs Store (Pvt) Ltd. has been dedicated to providing their customers with the best possible experience any departmental store in Karachi has to offer. Springs has always taken pride in the large variety of imported and local goods we have to offer, the quality and cleanliness of our goods and stores, and providing the best possible value to our customers",
+      " Your one-stop shop for a world of treasures, where quality meets value in every aisle. Discover a curated collection of imported delights and local favorites, all within a pristine and welcoming atmosphere. Experience the joy of shopping redefined, only at Springs.",
     featured: true,
     grid: 1,
     imageWidth: 72,

@@ -30,6 +30,7 @@ const NavDropdown = ({ title, mainLink, links, menuType }) => {
         className={`
           inline-flex justify-center w-full font-semibold outline-none py-2 relative 
         `}
+        onClick={() => setIsOpen(false)}
       >
         <div
           className={` after:block after:content-[''] after:absolute after:h-[2px] after:bg-logoColorPrimary after:w-full after:scale-x-0 
@@ -41,14 +42,15 @@ const NavDropdown = ({ title, mainLink, links, menuType }) => {
       </Link>
 
       {isOpen && (
-        <div className="origin-top-right absolute left-1/2 transform -translate-x-1/2 w-max bg-white text-black shadow-lg">
+        <div className="origin-top-right absolute left-1/2 transform -translate-x-1/2 w-max bg-white text-black shadow-xl">
           <div
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="options-menu"
+            className="w-full"
           >
             {menuType === "extended" ? (
-              <div className="flex gap-10 px-16 py-10">
+              <div className="flex gap-10 px-20 py-16">
                 {links?.map((item, index) => (
                   <div key={index}>
                     <p className="text-lg font-bold mb-5 text-gray-600">
@@ -68,7 +70,7 @@ const NavDropdown = ({ title, mainLink, links, menuType }) => {
                 ))}
               </div>
             ) : (
-              <div className="">
+              <div className="py-5">
                 {links.map((link, subIndex) => (
                   <Link
                     key={subIndex}

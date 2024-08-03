@@ -12,13 +12,12 @@ export const footerLinks = [
   {
     title: "Our Services",
     links: [
-      { href: "/services", name: "Web Application Development" },
-      { href: "/services", name: "Mobile Application Development" },
-      { href: "/services", name: "AI & ML" },
+      { href: "/services", name: "Web Application" },
+      { href: "/services", name: "Mobile Application" },
+      { href: "/services", name: "Data & AI" },
       { href: "/services", name: "Cloud Services" },
       { href: "/services", name: "Blockchain Services" },
       { href: "/services", name: "E-Commerce Solutions" },
-      { href: "/services", name: "Data Science" },
     ],
   },
   {

@@ -31,21 +31,10 @@ const WhatWeDo = () => {
             <div
               key={item.id}
               className="flex gap-5 border-2 shadow-md px-5 py-10 relative bg-slate-100 hover:bg-slate-50 transition-all duration-500"
-              // hover:scale-105
             >
               <div className="w-3/5">
                 <p className="text-lg font-bold mb-5">{item.name}</p>
                 <p className="text-sm mb-5 text-gray-600">{item.description}</p>
-                {/* <div className="flex flex-wrap gap-3">
-                  {item.techs.map((tech, techIndex) => (
-                    <div
-                      key={techIndex}
-                      className="text-xs font-bold px-3 py-1 bg-logoColorPrimary rounded-full text-white"
-                    >
-                      {tech.name}
-                    </div>
-                  ))}
-                </div> */}
               </div>
               <div className="w-2/5">
                 <Image src={item.image} className="w-56" />

@@ -21,7 +21,7 @@ const Footer = () => {
           alt="service-bg"
           className="absolute bottom-0 left-0 overflow-hidden -rotate-90 opacity-50 z-10"
         />
-        <div className="flex gap-16">
+        <div className="flex gap-10">
           <div className="z-20">
             <Link href={"/"} className="flex gap-3 items-center mb-10 ">
               <div>
@@ -46,14 +46,15 @@ const Footer = () => {
               <p className="text-sm">+92 (334) 0041777</p>
             </div>
           </div>
-          {footerLinks.map((item) =>
+          {footerLinks.map((item, index) =>
             item.title !== "Our Technologies" ? (
-              <div className="flex flex-col">
+              <div className="flex flex-col" key={index}>
                 <p className="text-logoColorPrimary font-bold text-xl mb-5">
                   {item.title}
                 </p>
-                {item.links.map((link) => (
+                {item.links.map((link, subIndex) => (
                   <Link
+                    key={subIndex}
                     href={link.href}
                     className="font-thin mb-3 hover:text-logoColorPrimary transition-all"
                   >
@@ -67,11 +68,12 @@ const Footer = () => {
                   {item.title}
                 </p>
                 <div className="flex gap-10">
-                  {item.links.map((link) => (
-                    <div className="flex flex-col">
+                  {item.links.map((link, subIndex) => (
+                    <div className="flex flex-col" key={subIndex}>
                       <p className="font-bold mb-3">{link.title}</p>
-                      {link.links.map((link) => (
+                      {link.links.map((link, linkIndex) => (
                         <Link
+                          key={linkIndex}
                           href={link.href}
                           className="font-thin mb-3 hover:text-logoColorPrimary transition-all"
                         >

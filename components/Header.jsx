@@ -28,7 +28,6 @@ const Header = () => {
     };
   }, []);
 
-  // if (pathname !== "/")
   return (
     <header
       style={{
@@ -75,8 +74,9 @@ const Header = () => {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          {navbarData.map((data) => (
+          {navbarData.map((data, index) => (
             <NavDropdown
+              key={index}
               title={data.title}
               mainLink={data.mainLink}
               menuType={data.menuType}
@@ -87,9 +87,12 @@ const Header = () => {
           <NavLink type={"navbar"} link="/portfolio" text="Work" />
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <button className="text-sm rounded-full font-bold px-5 py-3 bg-logoColorPrimary before:ease relative overflow-hidden transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-slate-600 before:opacity-10 before:duration-700 hover:shadow-slate-800 hover:before:-translate-x-52">
+          <Link
+            href="/contact"
+            className="text-sm rounded-full font-bold px-5 py-3 bg-logoColorPrimary before:ease relative overflow-hidden transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-slate-600 before:opacity-10 before:duration-700 hover:shadow-slate-800 hover:before:-translate-x-52"
+          >
             Schedule a Consultation
-          </button>
+          </Link>
         </div>
       </nav>
       <Dialog

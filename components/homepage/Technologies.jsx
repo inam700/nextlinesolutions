@@ -34,8 +34,9 @@ const Technologies = () => {
               "CMS",
               "Blockchain",
               "Cloud",
-            ].map((item) => (
+            ].map((item, index) => (
               <div
+                key={index}
                 className={`mb-2 px-5 py-2 cursor-pointer ${
                   active === item &&
                   "bg-gradient-to-r from-logoColorPrimary to-white text-white rounded-full"

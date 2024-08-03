@@ -34,8 +34,9 @@ const PortfolioPage = () => {
           </p>
           <div className="">
             <div className="flex flex-wrap justify-center gap-3 mb-10">
-              {filters.map((item) => (
+              {filters.map((item, index) => (
                 <div
+                  key={index}
                   className={`border rounded-md px-5 py-1 text-sm cursor-pointer ${
                     item === active && "bg-logoColorPrimary text-white"
                   }`}

@@ -35,6 +35,7 @@ const ServicesPage = () => {
           <div className="grid grid-cols-3 gap-10 justify-center mb-10">
             {servicesForPage.map((service, index) => (
               <div
+                key={index}
                 style={{
                   backgroundColor: "#252033",
                 }}
@@ -49,8 +50,11 @@ const ServicesPage = () => {
                 </div>
                 <hr />
                 <div className="flex px-10 py-7 gap-3 flex-wrap ">
-                  {service.techs.map((tech) => (
-                    <p className="text-sm relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-logoColorPrimary after:w-full after:scale-x-0 after:hover:scale-x-110 after:transition after:duration-300 after:origin-center cursor-pointer">
+                  {service.techs.map((tech, index) => (
+                    <p
+                      key={index}
+                      className="text-sm relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-logoColorPrimary after:w-full after:scale-x-0 after:hover:scale-x-110 after:transition after:duration-300 after:origin-center cursor-pointer"
+                    >
                       {tech}
                     </p>
                   ))}

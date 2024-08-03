@@ -40,8 +40,8 @@ const AboutUs = () => {
             while fostering a culture of innovation, collaboration, and
             continuous improvement.
           </p>
-          {coreValues.map((item) => (
-            <p className="text-gray-700 mb-2">
+          {coreValues.map((item, index) => (
+            <p key={index} className="text-gray-700 mb-2">
               <b className="font-bold text-gray-600">{item.title}: </b>
               {item.text}
             </p>
@@ -50,7 +50,7 @@ const AboutUs = () => {
             type="button"
             className="outline-none rounded-full text-sm font-bold px-10 py-3 mt-5 bg-logoColorPrimary text-white before:ease relative overflow-hidden transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-slate-600 before:opacity-10 before:duration-700 hover:shadow-slate-800 hover:before:-translate-x-40"
           >
-            Know More
+            Learn More
           </button>
         </div>
       </div>

@@ -4,11 +4,11 @@ import React from "react";
 import aboutCompany from "@/assets/images/about/overview.jpg";
 import tryImage from "@/assets/images/about/try-1.jpg";
 
-// export const metadata = {
-//   title: "About us",
-// };
+export const metadata = {
+  title: "About us",
+};
 
-const AboutPage = () => {
+export default function AboutPage() {
   return (
     <div className="mt-20">
       <div
@@ -72,8 +72,8 @@ const AboutPage = () => {
             { number: "20+", text: "Clients" },
             { number: "30+", text: "Projects" },
             { number: "10+", text: "Industries Served" },
-          ].map((item) => (
-            <div className={`px-10 py-5 text-white rounded-lg`}>
+          ].map((item, index) => (
+            <div key={index} className={`px-10 py-5 text-white rounded-lg`}>
               <p className="text-xl font-extrabold text-center">
                 <span className="text-4xl text-logoColorPrimary">
                   {item.number}
@@ -119,6 +119,4 @@ const AboutPage = () => {
       </p>
     </div>
   );
-};
-
-export default AboutPage;
+}

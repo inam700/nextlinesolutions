@@ -27,8 +27,11 @@ const Industries = () => {
           to your specific needs.
         </p>
         <div className="flex justify-center flex-wrap gap-5">
-          {industries.map((item) => (
-            <div className="shadow-lg rounded-md bg-logoColorPrimary relative">
+          {industries.map((item, index) => (
+            <div
+              key={index}
+              className="shadow-lg rounded-md bg-logoColorPrimary relative"
+            >
               <Image
                 src={item.image}
                 className="w-64 h-56 rounded-md hover:scale-105"

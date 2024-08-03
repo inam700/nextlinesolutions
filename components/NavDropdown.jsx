@@ -3,9 +3,6 @@ import Link from "next/link";
 import React, { useRef, useState } from "react";
 
 const NavDropdown = ({ title, mainLink, links, menuType }) => {
-  const linkHover =
-    "relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center";
-
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -32,7 +29,6 @@ const NavDropdown = ({ title, mainLink, links, menuType }) => {
         href={mainLink}
         className={`
           inline-flex justify-center w-full font-semibold outline-none py-2 relative 
-         
         `}
       >
         <div
@@ -53,14 +49,14 @@ const NavDropdown = ({ title, mainLink, links, menuType }) => {
           >
             {menuType === "extended" ? (
               <div className="flex gap-10 px-16 py-10">
-                {links?.map((item) => (
-                  <div>
+                {links?.map((item, index) => (
+                  <div key={index}>
                     <p className="text-lg font-bold mb-5 text-gray-600">
                       {item.typeName}
                     </p>
-                    {item.types.map((link) => (
+                    {item.types.map((link, subIndex) => (
                       <Link
-                        key={link.href}
+                        key={subIndex}
                         href={link.href}
                         className="block mb-3 hover:text-logoColorPrimary text-sm"
                         role="menuitem"
@@ -73,9 +69,9 @@ const NavDropdown = ({ title, mainLink, links, menuType }) => {
               </div>
             ) : (
               <div className="">
-                {links.map((link) => (
+                {links.map((link, subIndex) => (
                   <Link
-                    key={link.href}
+                    key={subIndex}
                     href={link.href}
                     className="block hover:text-logoColorPrimary text-sm ps-10 pe-20 py-3"
                     role="menuitem"

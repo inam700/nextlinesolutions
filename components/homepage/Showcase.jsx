@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Showcase = () => {
   return (
     <div class="h-screen relative">
@@ -20,20 +22,22 @@ const Showcase = () => {
         </p>
 
         <div className="flex flex-col md:flex-row justify-center md:justify-start space-y-3 md:space-y-0 md:space-x-5">
-          <button
+          <Link
+            href={"/contact"}
             type="button"
-            className="rounded-full min-w-[120px] text-sm font-bold px-10 py-3 bg-slate-200 text-gray-900 
+            className="rounded-full min-w-48 text-center text-sm font-bold px-10 py-3 bg-slate-200 text-gray-900 
                         hover:shadow-slate-800 transition-shadow duration-300 ease-in-out"
           >
             Let's Connect
-          </button>
-          <button
+          </Link>
+          <Link
+            href={"/about"}
             type="button"
-            className="rounded-full min-w-[120px] text-sm font-bold px-10 py-3 bg-logoColorPrimary text-white
+            className="rounded-full min-w-48 text-center text-sm font-bold px-10 py-3 bg-logoColorPrimary text-white
                         hover:shadow-slate-800 transition-shadow duration-300 ease-in-out"
           >
             Why Us
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,34 +1,40 @@
 const Showcase = () => {
   return (
-    <div className="h-screen bg-cover bg-no-repeat bg-[url('../../assets/images/showcase-bg.jpg')] before:content-[''] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:z-10 before:bg-black/5">
-      <div className="md:px-20 absolute left-0 right-0 z-10 px-5 lg:top-52 lg:mt-20 text-white">
-        <p className="text-5xl font-bold mb-2">Turning</p>
-        <p className="text-5xl font-bold mb-2">
+    <div class="h-screen relative">
+      <div class="absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center bg-[url('../../assets/images/showcase-bg.jpg')]" />
+      <div class="w-full h-full absolute top-0 left-0 z-10 bg-black/50 lg:bg-black/5" />
+      <div className="md:px-20 absolute left-0 right-0 z-10 px-5 bottom-0 mb-20 md:mt-20 text-white">
+        <p className="text-3xl md:text-5xl font-bold leading-tight">Turning</p>
+        <p className="text-3xl md:text-5xl font-bold leading-tight">
           Ideas into <span className="text-logoColorPrimary">Code</span>
         </p>
-        <p className="text-5xl font-bold mb-7">
+        <p className="text-3xl md:text-5xl font-bold mb-5 leading-tight">
           Innovation into <span className="text-logoColorPrimary">Reality</span>
         </p>
-        <p className="mt-3">
-          Your vision, our expertise. We don't just build software,
-          <br /> we craft comprehensive solutions. From innovative custom
-          applications to <br />
+
+        <p className="max-w-md mx-auto md:mx-0 text-sm md:text-base mb-7">
+          Your vision, our expertise. We don't just build software; we craft
+          comprehensive solutions. From innovative custom applications to
           streamlined enterprise systems, we transform your vision into a
           digital reality.
         </p>
 
-        <button
-          type="button"
-          className="outline-none rounded-full min-w-40 text-sm font-bold px-10 py-3 mt-5 me-5 bg-slate-200 text-gray-900 before:ease relative overflow-hidden transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-slate-600 before:opacity-10 before:duration-700 hover:shadow-slate-800 hover:before:-translate-x-40"
-        >
-          Let's Connect
-        </button>
-        <button
-          type="button"
-          className="outline-none rounded-full min-w-40 text-sm font-bold px-10 py-3 mt-5 bg-logoColorPrimary text-white before:ease relative overflow-hidden transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-slate-600 before:opacity-10 before:duration-700 hover:shadow-slate-800 hover:before:-translate-x-40"
-        >
-          Why Us
-        </button>
+        <div className="flex flex-col md:flex-row justify-center md:justify-start space-y-3 md:space-y-0 md:space-x-5">
+          <button
+            type="button"
+            className="rounded-full min-w-[120px] text-sm font-bold px-10 py-3 bg-slate-200 text-gray-900 
+                        hover:shadow-slate-800 transition-shadow duration-300 ease-in-out"
+          >
+            Let's Connect
+          </button>
+          <button
+            type="button"
+            className="rounded-full min-w-[120px] text-sm font-bold px-10 py-3 bg-logoColorPrimary text-white
+                        hover:shadow-slate-800 transition-shadow duration-300 ease-in-out"
+          >
+            Why Us
+          </button>
+        </div>
       </div>
     </div>
   );

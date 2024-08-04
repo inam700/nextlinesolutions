@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import brand from "@/assets/icons/brand.png";
+import brand from "@/assets/icons/brand-new.png";
 import { FaEnvelope, FaFacebook, FaLinkedin, FaSkype } from "react-icons/fa6";
 import { FaMobileAlt } from "react-icons/fa";
 import { footerLinks } from "@/assets/data/footer";
@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div>
       <div
-        className="text-white p-20 relative"
+        className="text-white p-5 lg:p-20 relative"
         style={{
           backgroundColor: "#252033",
         }}
@@ -21,16 +21,10 @@ const Footer = () => {
           alt="service-bg"
           className="absolute bottom-0 left-0 overflow-hidden -rotate-90 opacity-50 z-10"
         />
-        <div className="flex gap-10">
+        <div className="flex flex-col lg:flex-row gap-10">
           <div className="z-20">
             <Link href={"/"} className="flex gap-3 items-center mb-10 ">
-              <div>
-                <Image src={brand} alt="brand" className={"w-14"} />
-              </div>
-              <div>
-                <p className="text-2xl font-bold tracking-widest">NEXTLINE</p>
-                <p className="text-2xl font-bold">SOLUTIONS</p>
-              </div>
+              <Image src={brand} alt="brand" className={"w-32"} />
             </Link>
             <p className="mb-5">
               We're the dream team for digital innovation, <br /> building
@@ -67,7 +61,7 @@ const Footer = () => {
                 <p className="text-logoColorPrimary font-bold text-xl mb-5">
                   {item.title}
                 </p>
-                <div className="flex gap-10">
+                <div className="flex flex-wrap gap-10">
                   {item.links.map((link, subIndex) => (
                     <div className="flex flex-col" key={subIndex}>
                       <p className="font-bold mb-3">{link.title}</p>
@@ -88,13 +82,16 @@ const Footer = () => {
           )}
         </div>
       </div>
-      <div className="px-20 py-4 flex justify-between">
-        <p className="font-bold flex">
+      <div className="px-5 lg:px-20 py-4 flex items-center flex-col lg:flex-row justify-between">
+        <p className="text-xs font-bold">
+          {" "}
           Copyrights ©{" "}
-          <p className="uppercase ms-1"> NextLine Solutions Private Limited</p>,
-          All Rights Reserved{" "}
-        </p>
-        <div className="flex items-center gap-5">
+          <span className="uppercase ms-1">
+            NextLine Solutions Private Limited{" "}
+          </span>{" "}
+          , All Rights Reserved
+        </p>{" "}
+        <div className="flex items-center justify-center lg:justify-start gap-5">
           <FaLinkedin
             size={25}
             className="cursor-pointer hover:text-logoColorPrimary transition-all"

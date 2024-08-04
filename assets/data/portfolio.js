@@ -6,6 +6,8 @@ import portfolioIcon5 from "@/assets/icons/portfolio/cozy.png";
 import portfolioIcon6 from "@/assets/icons/portfolio/garsho.png";
 import portfolioIcon7 from "@/assets/icons/portfolio/roam.png";
 import portfolioIcon8 from "@/assets/icons/portfolio/gitcha.png";
+import portfolioIcon9 from "@/assets/icons/portfolio/doozoo.png";
+import portfolioIcon10 from "@/assets/icons/portfolio/ladle.png";
 
 import portfolioImage1 from "@/assets/images/portfolio/dvago-main.png";
 import portfolioImage2 from "@/assets/images/portfolio/myvitaminstore-main.png";
@@ -15,6 +17,8 @@ import portfolioImage5 from "@/assets/images/portfolio/cozy.png";
 import portfolioImage6 from "@/assets/images/portfolio/garsho.png";
 import portfolioImage7 from "@/assets/images/portfolio/roam.png";
 import portfolioImage8 from "@/assets/images/portfolio/gitcha.png";
+import portfolioImage9 from "@/assets/images/portfolio/doozoo-1.png";
+import portfolioImage10 from "@/assets/images/portfolio/ladle-1.png";
 
 import techSvgAndroid from "@/assets/icons/tools/svg/mobile/android.svg";
 import techSvgIOS from "@/assets/icons/tools/svg/mobile/ios.svg";
@@ -54,6 +58,8 @@ import techSvgShopify from "@/assets/icons/tools/svg/cms/shopify.svg";
 import techSvgKeras from "@/assets/icons/tools/svg/ai/keras.svg";
 import techSvgPytorch from "@/assets/icons/tools/svg/ai/pytorch.svg";
 import techSvgOpenAI from "@/assets/icons/tools/svg/ai/openai.svg";
+import techSvgFlask from "@/assets/icons/tools/svg/ai/flask.svg";
+import techSvgFastApi from "@/assets/icons/tools/svg/ai/fastapi.svg";
 import techSvgTensorflow from "@/assets/icons/tools/svg/ai/tensorflow.svg";
 
 import techSvgApache from "@/assets/icons/tools/svg/data-science/apache-spark.svg";
@@ -179,6 +185,64 @@ export const portfolio = [
     filterTags: ["Web"],
   },
   {
+    id: 9,
+    name: "AI-Powered Kitchen Assistant",
+    platform: "Web, Mobile Responsive App",
+    image: portfolioImage10,
+    icon: portfolioIcon10,
+    tags: [
+      { name: "Python", image: techSvgPython },
+      { name: "Flask", image: techSvgFlask },
+      { name: "FastApi", image: techSvgFastApi },
+    ],
+    description:
+      "Ladle is your AI-powered kitchen companion, transforming your kitchen into a realm of personalized flavor. Powered by advanced Natural Language Processing and cutting-edge LLM models, Ladle crafts bespoke recipes that cater to your unique tastes and dietary needs. Whether you're a vegan virtuoso, a vegetarian aficionado, or a gluten-free gourmand, Ladle effortlessly conjures up imaginative dishes that align with your preferences, favorite ingredients, and culinary style. With Ladle, every meal becomes a personalized culinary adventure.",
+    featured: false,
+    grid: 2,
+    imageWidth: 72,
+    filterTags: ["Web", "Data & AI"],
+  },
+
+  {
+    id: 8,
+    name: "Online Grocery Store",
+    platform: "Web, Mobile Responsive App",
+    image: portfolioImage3,
+    icon: portfolioIcon3,
+    tags: [
+      { name: "WordPress", image: techSvgWordpress },
+      { name: "PHP", image: techSvgPhp },
+      { name: "Laravel", image: techSvgLaravel },
+    ],
+    description:
+      " Your one-stop shop for a world of treasures, where quality meets value in every aisle. Discover a curated collection of imported delights and local favorites, all within a pristine and welcoming atmosphere. Experience the joy of shopping redefined, only at Springs.",
+    featured: true,
+    grid: 1,
+    imageWidth: 72,
+    filterTags: ["CMS"],
+  },
+
+  {
+    id: 10,
+    name: "AI-Powered Designing Tool",
+    platform: "Web, Mobile Responsive App",
+    image: portfolioImage9,
+    icon: portfolioIcon9,
+    tags: [
+      { name: "JavaScript", image: techSvgJavascript },
+      { name: "Python", image: techSvgPython },
+      { name: "React.JS", image: techSvgReactJS },
+      { name: "Flask", image: techSvgFlask },
+      { name: "FastApi", image: techSvgFastApi },
+    ],
+    description:
+      "Doozoo is a revolutionary AI-powered design platform that empowers creative agencies to effortlessly craft stunning visuals. Leveraging advanced image generation and natural language understanding, Doozoo transforms ideas into captivating graphics, ads, videos, and banners. Streamlining the design process, Doozoo liberates agencies from tedious tasks, enabling them to focus on unleashing their full creative potential.",
+    featured: false,
+    grid: 1,
+    imageWidth: 72,
+    filterTags: ["Web", "Data & AI"],
+  },
+  {
     id: 7,
     name: "Chatbot for Customer Service",
     platform: "Web, Mobile Responsive App",
@@ -194,23 +258,9 @@ export const portfolio = [
     description:
       "Your one-stop shop for stylish and affordable furniture is getting even better! Cozy App is unveiling a smart new chatbot, making it easier than ever to get the information you need about our products, your orders, and more – right at your fingertips.",
     featured: true,
-    grid: 1,
+    grid: 2,
     imageWidth: 60,
     filterTags: ["Web", "Data & AI"],
-  },
-  {
-    id: 8,
-    name: "Online Grocery Store",
-    platform: "Web, Mobile Responsive App",
-    image: portfolioImage3,
-    icon: portfolioIcon3,
-    tags: [{ name: "WordPress", image: techSvgWordpress }],
-    description:
-      " Your one-stop shop for a world of treasures, where quality meets value in every aisle. Discover a curated collection of imported delights and local favorites, all within a pristine and welcoming atmosphere. Experience the joy of shopping redefined, only at Springs.",
-    featured: true,
-    grid: 1,
-    imageWidth: 72,
-    filterTags: ["CMS"],
   },
 ];
 

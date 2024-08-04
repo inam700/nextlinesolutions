@@ -1,11 +1,16 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import brandIcon from "@/assets/icons/brand.png";
+import brandIcon from "@/assets/icons/brand-new.png";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  PopoverGroup,
+} from "@headlessui/react";
 import NavLink from "./NavLink";
 import NavDropdown from "./NavDropdown";
 import { navbarData } from "@/assets/data/showcase";
@@ -33,45 +38,41 @@ const Header = () => {
       style={{
         backgroundColor:
           isScrolled || pathname !== "/" ? "#252033" : "transparent",
-        // Conditionally add 'fixed' class
-        position: isScrolled ? "fixed" : "absolute",
-        top: 0,
-        width: "100%",
-        zIndex: 100, // Ensure the header stays above other content
       }}
-      className={`relative md:px-20 py-1 z-10 flex items-center ${
-        isScrolled ? "shadow-md shadow-black" : ""
+      className={`top-0 md:px-20 py-1 z-20 flex items-center ${
+        isScrolled ? "shadow-md shadow-black lg:fixed" : "absolute"
       } w-full left-0 text-white transition-shadow`}
     >
       <nav
         aria-label="Global"
-        className="flex w-full items-center justify-between py-6"
+        className="flex w-full items-center justify-between py-6 px-6 lg:px-0"
       >
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="p-1.5">
             <span className="sr-only">NextLine Solutions</span>
             <div className="flex gap-3">
-              <Image alt="" src={brandIcon} className="h-12 w-auto" />
-              <div className="-mt-1">
-                <p className="text-xl font-extrabold tracking-widest">
-                  NEXTLINE
-                </p>
-                <p className="text-lg font-extrabold tracking-wider">
-                  SOLUTIONS
-                </p>
-              </div>
+              <Image
+                alt=""
+                src={brandIcon}
+                className="h-9 mt-1 lg:mt-0 lg:h-12 w-auto"
+              />
             </div>
           </Link>
         </div>
         <div className="flex lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-          >
-            <span className="sr-only">Open main menu</span>
-            <FaBars aria-hidden="true" className="h-6 w-6" />
-          </button>
+          {mobileMenuOpen ? (
+            <FaXmark
+              onClick={() => setMobileMenuOpen(false)}
+              aria-hidden="true"
+              className="h-6 w-6"
+            />
+          ) : (
+            <FaBars
+              aria-hidden="true"
+              className="h-6 w-6"
+              onClick={() => setMobileMenuOpen(true)}
+            />
+          )}
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           {navbarData.map((data, index) => (
@@ -98,45 +99,33 @@ const Header = () => {
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
-        className="lg:hidden"
+        as="div"
+        className="lg:hidden relative z-10 focus:outline-none"
       >
-        <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">NextLine Solutions</span>
-              <Image alt="" src={brandIcon} className="h-12 w-auto" />
-            </Link>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5"
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex h-full items-center justify-center">
+            <DialogPanel
+              transition
+              style={{ backgroundColor: "#252033" }}
+              className="w-full h-full mt-28 px-10 text-white"
             >
-              <span className="sr-only">Close menu</span>
-              <FaXmark aria-hidden="true" className="h-6 w-6" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+              <div className="flex flex-col gap-5">
+                <NavLink type="navbar" link={"/about"} text="About us" />
+                <NavLink type="navbar" link={"/services"} text="Services" />
+                <NavLink type="navbar" link={"/portfolio"} text="Work" />
+              </div>
+
+              <div className="mt-20">
                 <Link
-                  href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
+                  href="/contact"
+                  className="text-sm mt-10 rounded-full font-bold px-5 py-3 bg-logoColorPrimary"
                 >
-                  Features
+                  Contact Us
                 </Link>
               </div>
-              <div className="py-6">
-                <Link
-                  href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 hover:bg-gray-50"
-                >
-                  Log in
-                </Link>
-              </div>
-            </div>
+            </DialogPanel>
           </div>
-        </DialogPanel>
+        </div>
       </Dialog>
     </header>
   );

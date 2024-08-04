@@ -60,22 +60,15 @@ export const services = [
 
 export const servicesForPage = [
   {
-    name: "UI/UX Design",
-    description:
-      "Empower your online presence with our specialized UI & UX services. Our team crafts intuitive, visually appealing interfaces for web and mobile applications. By staying ahead of design trends, we ensure your digital products are both functional and delightful to use.",
-    techs: ["Adobe Xd", "Figma"],
-  },
-
-  {
     name: "Front-End Development",
     description:
-      "Empower your online presence with our specialized UI & UX services. Our team crafts intuitive, visually appealing interfaces for web and mobile applications. By staying ahead of design trends, we ensure your digital products are both functional and delightful to use.",
+      "We build blazing-fast, responsive, and highly interactive front-end web applications that captivate users and enhance customer acquisition. Our expert team leverages the latest technologies to create seamless user experiences across all devices. We prioritize performance optimization, accessibility, and cross-browser compatibility to ensure your web application performs flawlessly for everyone—partner with us to transform your vision into a cutting-edge, user-friendly web application that exceeds expectations.",
     techs: ["JavaScript", "TypeScript", "React.JS", "Next.JS", "Vue.JS"],
   },
   {
     name: "Back-End Development",
     description:
-      "Empower your online presence with our specialized UI & UX services. Our team crafts intuitive, visually appealing interfaces for web and mobile applications. By staying ahead of design trends, we ensure your digital products are both functional and delightful to use.",
+      "We build scalable, secure, and high-performance back-end web applications that power your digital success. Our expert team leverages cutting-edge technologies to create robust APIs, databases, and server infrastructure. We prioritize data security, reliability, and maintainability to ensure your application runs smoothly under any load. Partner with us to build a solid foundation for your web application that delivers exceptional performance and seamless functionality.",
     techs: [
       "Node.JS",
       "Express.JS",
@@ -87,40 +80,47 @@ export const servicesForPage = [
     ],
   },
   {
-    name: "Mobile Development",
-    description:
-      "Empower your online presence with our specialized UI & UX services. Our team crafts intuitive, visually appealing interfaces for web and mobile applications. By staying ahead of design trends, we ensure your digital products are both functional and delightful to use.",
-    techs: ["React Native", "Swift", "Android", "Flutter"],
-  },
-  {
-    name: "Databases",
-    description:
-      "Empower your online presence with our specialized UI & UX services. Our team crafts intuitive, visually appealing interfaces for web and mobile applications. By staying ahead of design trends, we ensure your digital products are both functional and delightful to use.",
-    techs: ["Mongo DB", "MySQL", "Firebase", "Postgres"],
-  },
-
-  {
     name: "Data & AI",
     description:
-      "Empower your online presence with our specialized UI & UX services. Our team crafts intuitive, visually appealing interfaces for web and mobile applications. By staying ahead of design trends, we ensure your digital products are both functional and delightful to use.",
+      "We empower businesses with scalable data pipelines, robust infrastructure, and advanced machine-learning models. Our expert team designs and builds data-driven solutions that uncover valuable insights, automate processes, and drive intelligent decision-making. We prioritize data accuracy, security, and scalability to ensure your organization harnesses the full potential of its data—partner with us to unlock the power of data and artificial intelligence for your business.",
     techs: ["Python", "Tensorflow", "PyTorch", "OpenAI"],
   },
   {
     name: "E-Commerce",
     description:
-      "Empower your online presence with our specialized UI & UX services. Our team crafts intuitive, visually appealing interfaces for web and mobile applications. By staying ahead of design trends, we ensure your digital products are both functional and delightful to use.",
+      "We build high-converting online stores that drive sales and elevate your brand. Our expert team crafts intuitive user experiences, secure payment gateways, and scalable infrastructure to handle high traffic volumes. We focus on optimizing product displays, streamlining checkout processes, and integrating with popular marketing and analytics tools. Partner with us to create a seamless online shopping experience that delights customers and maximizes your revenue potential.",
     techs: ["WordPress", "Shopify", "Shopify OS", "Shopify Polaris"],
   },
   {
+    name: "UI/UX Design",
+    description:
+      "We craft intuitive, user-centric interfaces that prioritize accessibility and seamless experiences. Our data-driven UI/UX design process ensures your software is visually appealing, easy to navigate, and optimized for maximum user engagement and conversion. We focus on responsive designs that adapt flawlessly to any device, ensuring a consistent platform experience. Partner with us to elevate your software and delight your users with a design that truly understands their needs.",
+    techs: ["Adobe Xd", "Figma"],
+  },
+
+  {
+    name: "Mobile Development",
+    description:
+      "We create intuitive, high-performing mobile apps for both major platforms that captivate users and deliver measurable results. Our experienced team focuses on smooth navigation, a user-friendly interface, and offline functionality for an optimal user experience. Partner with us to bring your app vision to life and achieve your business objectives.",
+    techs: ["React Native", "Swift", "Android", "Flutter"],
+  },
+
+  {
     name: "Blockchain Services",
     description:
-      "Empower your online presence with our specialized UI & UX services. Our team crafts intuitive, visually appealing interfaces for web and mobile applications. By staying ahead of design trends, we ensure your digital products are both functional and delightful to use.",
+      "We build secure, transparent, and decentralized applications that leverage blockchain technology. Our expert team develops custom smart contracts, tokenization platforms, and decentralized finance (DeFi) solutions. We prioritize security, scalability, and interoperability to ensure your blockchain applications are future-proof. Partner with us to harness the transformative power of blockchain for your business.",
     techs: ["React.JS", "Node.JS", "Web3", "NFT Marketplace", "DApp"],
   },
   {
     name: "Cloud Services",
     description:
-      "Empower your online presence with our specialized UI & UX services. Our team crafts intuitive, visually appealing interfaces for web and mobile applications. By staying ahead of design trends, we ensure your digital products are both functional and delightful to use.",
+      "We empower businesses with scalable, secure, and cost-effective cloud solutions. Our expert team designs and manages cloud infrastructure, ensuring optimal performance, reliability, and disaster recovery. We leverage cloud technologies to streamline operations, reduce costs, and enhance agility. Partner with us to accelerate your digital transformation and achieve your business goals in the cloud.",
     techs: ["AWS", "GCloud", "Kubernetes"],
+  },
+  {
+    name: "Consultation Services",
+    description:
+      "We guide businesses through the complexities of software selection and implementation. Our expert team analyzes your unique needs, recommends tailored solutions, and provides ongoing support to ensure a successful outcome. Whether you need to streamline operations, improve customer experiences, or drive innovation, we'll help you find the right software to achieve your goals. Partner with us for unbiased advice and a clear path to digital transformation.",
+    techs: [],
   },
 ];

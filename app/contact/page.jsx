@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <div className="mt-20">
       <div
-        className="pt-20 px-20 pb-10"
+        className="pt-20 px-5 lg:px-20 pb-10"
         style={{
           backgroundColor: "#252033",
         }}

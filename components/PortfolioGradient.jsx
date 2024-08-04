@@ -16,6 +16,10 @@ const PortfolioGradient = ({ item }) => {
     else if (item.id === 7)
       return "from-blue-950 to-blue-900 hover:to-blue-800";
     else if (item.id === 8) return "from-red-950 to-red-900 hover:to-red-800";
+    else if (item.id === 9)
+      return "from-orange-950 to-orange-900 hover:to-orange-800";
+    else if (item.id === 10)
+      return "from-pink-950 to-pink-900 hover:to-pink-800";
   };
 
   const projectImage = () => {
@@ -28,6 +32,8 @@ const PortfolioGradient = ({ item }) => {
     else if (item.id === 6) return "w-72";
     else if (item.id === 7) return "w-60";
     else if (item.id === 8) return "w-72";
+    else if (item.id === 10) return "w-72";
+    else return null;
   };
 
   if (item.grid === 2)

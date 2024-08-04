@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@headlessui/react": "^2.1.2",
     "bootstrap": "^5.3.3",
     "next": "14.2.5",

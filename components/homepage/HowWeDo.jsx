@@ -6,7 +6,7 @@ const HowWeDo = () => {
   return (
     <>
       <div className="py-20">
-        <div className="px-20">
+        <div className="px-5 lg:px-20">
           <p className="mb-3 text-4xl font-extrabold">
             How we <span className="text-logoColorPrimary">Do</span>
           </p>
@@ -15,7 +15,7 @@ const HowWeDo = () => {
             Our transparent delivery process ensures <br /> consistency at every
             stage, turning your vision into reality with precision and clarity.
           </p>
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid lg:grid-cols-3 gap-10">
             {approach.map((item) => (
               <div
                 className="px-10 h-full py-10 mb-5 shadow-lg hover:shadow-2xl rounded-md relative bg-gray-50"

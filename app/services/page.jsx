@@ -9,7 +9,7 @@ const ServicesPage = () => {
     <>
       <div className="mt-20">
         <div
-          className="pt-20 px-20 pb-10"
+          className="pt-20 px-5 lg:px-20 pb-10"
           style={{
             backgroundColor: "#252033",
           }}
@@ -22,7 +22,7 @@ const ServicesPage = () => {
             Your trusted partner in innovative software solutions.
           </p>
         </div>
-        <div className="px-20 mt-20">
+        <div className="lg:px-20 mt-20">
           <p className="text-5xl font-extrabold mb-3 text-center">
             Experience <span className="text-logoColorPrimary">Results </span>{" "}
             That Matter{" "}
@@ -32,14 +32,14 @@ const ServicesPage = () => {
             Let's explore how we can help you
           </p>
 
-          <div className="grid grid-cols-3 gap-10 justify-center mb-10">
+          <div className="grid lg:grid-cols-3 lg:gap-10 justify-center lg:mb-10">
             {servicesForPage.map((service, index) => (
               <div
                 key={index}
                 style={{
                   backgroundColor: "#252033",
                 }}
-                className="border border-black text-white rounded-3xl hover:scale-105 transition-all delay-75 hover:rounded-3xl shadow-md hover:shadow-black hover:shadow-2xl relative mb-10"
+                className="border border-black text-white lg:rounded-3xl hover:scale-105 transition-all delay-75 hover:rounded-3xl shadow-md hover:shadow-black hover:shadow-2xl relative mb-2 lg:mb-10"
               >
                 <div className="p-10">
                   <p className="text-logoColorPrimary text-xl font-bold mb-10">

@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <div className="mt-20">
       <div
-        className="pt-20 px-20 pb-10"
+        className="pt-20 px-5 lg:px-20 pb-10"
         style={{
           backgroundColor: "#252033",
         }}
@@ -25,7 +25,7 @@ export default function AboutPage() {
           Your trusted partner in innovative software solutions.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-20 mb-20 mt-20 px-20">
+      <div className="grid lg:grid-cols-2 lg:gap-20 mb-20 mt-20 px-5 lg:px-20">
         <div>
           <div className="flex items-center gap-3 mb-3"></div>
           <p className="font-extrabold text-gray-700 text-4xl mb-5">
@@ -56,7 +56,7 @@ export default function AboutPage() {
           <Image
             src={aboutCompany}
             alt="about"
-            className="rounded-xl shadow-lg hover:shadow-xl hover:shadow-black/25 shadow-black/25 w-10/12"
+            className="rounded-xl shadow-lg hover:shadow-xl hover:shadow-black/25 shadow-black/25 lg:w-10/12"
           />
         </div>
       </div>
@@ -64,9 +64,9 @@ export default function AboutPage() {
         style={{
           backgroundColor: "#252033",
         }}
-        className="p-20"
+        className="p-5 lg:p-20"
       >
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid lg:grid-cols-4 lg:gap-10">
           {[
             { number: "5+", text: "Years of Experience" },
             { number: "20+", text: "Clients" },
@@ -88,13 +88,13 @@ export default function AboutPage() {
       <HowWeDo />
 
       <div className="mb-20">
-        <div className="grid grid-cols-2">
+        <div className="grid lg:grid-cols-2">
           <Image src={tryImage} />
           <div
             style={{
               backgroundColor: "#252033",
             }}
-            className="p-10 flex flex-col justify-center"
+            className="p-5 lg:p-10 flex flex-col justify-center"
           >
             <p className="text-4xl text-white font-extrabold mb-5">
               Let's Build Your{" "}

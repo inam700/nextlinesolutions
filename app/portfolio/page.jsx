@@ -11,7 +11,7 @@ const PortfolioPage = () => {
     <>
       <div className="mt-20">
         <div
-          className="pt-20 px-20 pb-10"
+          className="pt-20 px-5 lg:px-20 pb-10"
           style={{
             backgroundColor: "#252033",
           }}
@@ -24,7 +24,7 @@ const PortfolioPage = () => {
             Your trusted partner in innovative software solutions.
           </p>
         </div>
-        <div className="px-20 mt-20">
+        <div className="lg:px-20 mt-20">
           <p className="text-5xl font-extrabold mb-3 text-center">
             Our Best <span className="text-logoColorPrimary">Work</span>{" "}
           </p>

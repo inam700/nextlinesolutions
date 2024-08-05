@@ -8,7 +8,7 @@ const Technologies = () => {
   return (
     <div className="p-5 md:p-20 relative">
       <p className="text-2xl sm:text-4xl font-extrabold mb-3 text-center">
-        Our <b className="text-logoColorPrimary">Technologies</b>
+        <b className="text-logoColorPrimary">Technologies</b> we use
       </p>
       <p className="text-base sm:text-lg mb-5 sm:mb-10 text-center">
         We're constantly pushing boundaries with the latest technologies to

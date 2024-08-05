@@ -5,12 +5,6 @@ import serviceBlockchain from "@/assets/images/services/blockchain-1.png";
 import serviceEcommerce from "@/assets/images/services/cms.png";
 import serviceCloud from "@/assets/images/services/cloud.png";
 
-import serviceIconSoftwareDevelopment from "@/assets/icons/services/software.png";
-import serviceIconAIML from "@/assets/icons/services/ai.png";
-import serviceIconBlockchain from "@/assets/icons/services/blockchain.png";
-import serviceIconEcommerce from "@/assets/icons/services/ecommerce.png";
-import serviceIconCloud from "@/assets/icons/services/cloud.png";
-
 export const services = [
   {
     id: 1,
@@ -59,17 +53,22 @@ export const services = [
 ];
 
 export const servicesForPage = [
+  // {
+  //   name: "Front-End Development",
+  //   description:
+  //     "We build blazing-fast, responsive, and highly interactive front-end web applications that captivate users and enhance customer acquisition. Our expert team leverages the latest technologies to create seamless user experiences across all devices. We prioritize performance optimization, accessibility, and cross-browser compatibility to ensure your web application performs flawlessly for everyone—partner with us to transform your vision into a cutting-edge, user-friendly web application that exceeds expectations.",
+  //   techs: ["JavaScript", "TypeScript", "React.JS", "Next.JS", "Vue.JS"],
+  // },
   {
-    name: "Front-End Development",
+    name: "Web Development",
     description:
-      "We build blazing-fast, responsive, and highly interactive front-end web applications that captivate users and enhance customer acquisition. Our expert team leverages the latest technologies to create seamless user experiences across all devices. We prioritize performance optimization, accessibility, and cross-browser compatibility to ensure your web application performs flawlessly for everyone—partner with us to transform your vision into a cutting-edge, user-friendly web application that exceeds expectations.",
-    techs: ["JavaScript", "TypeScript", "React.JS", "Next.JS", "Vue.JS"],
-  },
-  {
-    name: "Back-End Development",
-    description:
-      "We build scalable, secure, and high-performance back-end web applications that power your digital success. Our expert team leverages cutting-edge technologies to create robust APIs, databases, and server infrastructure. We prioritize data security, reliability, and maintainability to ensure your application runs smoothly under any load. Partner with us to build a solid foundation for your web application that delivers exceptional performance and seamless functionality.",
+      "We build captivating, high-performance web applications that drive user engagement and business success. Our expert team crafts seamless user experiences across devices, backed by scalable, secure, and reliable technology. We prioritize speed, accessibility, and data security to deliver web applications that exceed expectations on every level. Partner with us to bring your vision to life and unlock the full potential of your online presence.",
     techs: [
+      "JavaScript",
+      "TypeScript",
+      "React.JS",
+      "Next.JS",
+      "Vue.JS",
       "Node.JS",
       "Express.JS",
       "Java",
@@ -79,10 +78,36 @@ export const servicesForPage = [
       "Laravel",
     ],
   },
+  // {
+  //   name: "Back-End Development",
+  //   description:
+  //     "We build scalable, secure, and high-performance back-end web applications that power your digital success. Our expert team leverages cutting-edge technologies to create robust APIs, databases, and server infrastructure. We prioritize data security, reliability, and maintainability to ensure your application runs smoothly under any load. Partner with us to build a solid foundation for your web application that delivers exceptional performance and seamless functionality.",
+  //   techs: [
+  //     "Node.JS",
+  //     "Express.JS",
+  //     "Java",
+  //     "Spring Boot",
+  //     "Python",
+  //     "Php",
+  //     "Laravel",
+  //   ],
+  // },
+  // {
+  //   name: "Artificial Intelligence",
+  //   description:
+  //     "We empower businesses with scalable data pipelines, robust infrastructure, and advanced machine-learning models. Our expert team designs and builds data-driven solutions that uncover valuable insights, automate processes, and drive intelligent decision-making. We prioritize data accuracy, security, and scalability to ensure your organization harnesses the full potential of its data—partner with us to unlock the power of data and artificial intelligence for your business.",
+  //   techs: ["Python", "Tensorflow", "PyTorch", "OpenAI"],
+  // },
   {
-    name: "Data & AI",
+    name: "Artificial Intelligence",
     description:
-      "We empower businesses with scalable data pipelines, robust infrastructure, and advanced machine-learning models. Our expert team designs and builds data-driven solutions that uncover valuable insights, automate processes, and drive intelligent decision-making. We prioritize data accuracy, security, and scalability to ensure your organization harnesses the full potential of its data—partner with us to unlock the power of data and artificial intelligence for your business.",
+      "We empower businesses with advanced machine-learning models that drive intelligent decision-making and automate processes. Our expert team designs and builds AI-powered solutions that uncover valuable insights and optimize operations. We prioritize data accuracy and security to ensure your organization harnesses the full potential of artificial intelligence. Partner with us to unlock the transformative power of AI for your business.",
+    techs: ["Python", "Tensorflow", "PyTorch", "OpenAI"],
+  },
+  {
+    name: "Data Science",
+    description:
+      "We build scalable data pipelines and robust infrastructure to empower your business with data-driven solutions. Our expert team designs and implements data processing and analysis systems that deliver valuable insights and drive informed decision-making. We prioritize data accuracy, security, and scalability to ensure your organization can effectively leverage its data assets. Partner with us to unlock the power of data science and gain a competitive edge.",
     techs: ["Python", "Tensorflow", "PyTorch", "OpenAI"],
   },
   {

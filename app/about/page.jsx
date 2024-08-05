@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import aboutCompany from "@/assets/images/about/overview.jpg";
 import tryImage from "@/assets/images/about/try-1.jpg";
+import Link from "next/link";
 
 export const metadata = {
   title: "About us",
@@ -102,9 +103,13 @@ export default function AboutPage() {
               <br />
             </p>
             <div>
-              <button className="text-sm rounded-full font-bold px-5 py-3 text-white bg-logoColorPrimary before:ease relative overflow-hidden transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-slate-600 before:opacity-10 before:duration-700 hover:shadow-slate-800 hover:before:-translate-x-52">
+              <Link
+                href={"/contact"}
+                type="button"
+                className="text-sm rounded-full font-bold px-5 py-3 text-white bg-logoColorPrimary"
+              >
                 Let's Connect
-              </button>
+              </Link>
             </div>
           </div>
         </div>

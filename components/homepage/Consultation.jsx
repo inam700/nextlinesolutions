@@ -1,6 +1,7 @@
 import React from "react";
 import consultationbg from "@/assets/images/consultation-bg.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Consultation = () => {
   return (
@@ -26,13 +27,14 @@ const Consultation = () => {
           today.
         </p>
 
-        <button
+        <Link
+          href={"/contact"}
           type="button"
           className="rounded-full min-w-[180px] text-xs md:text-sm font-bold px-8 md:px-10 py-2 md:py-3 bg-logoColorPrimary text-white 
                     hover:shadow-slate-800 transition-shadow duration-300 ease-in-out"
         >
           Schedule a Consultation
-        </button>
+        </Link>
       </div>
     </div>
   );

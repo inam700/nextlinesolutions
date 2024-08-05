@@ -1,7 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import brand from "@/assets/icons/brand-new.png";
-import { FaEnvelope, FaFacebook, FaLinkedin, FaSkype } from "react-icons/fa6";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaSkype,
+} from "react-icons/fa6";
 import { FaMobileAlt } from "react-icons/fa";
 import { footerLinks } from "@/assets/data/footer";
 import servicebg from "@/assets/images/service-bg-1.png";
@@ -92,18 +98,24 @@ const Footer = () => {
           , All Rights Reserved
         </p>{" "}
         <div className="flex items-center justify-center lg:justify-start gap-5">
-          <FaLinkedin
-            size={25}
-            className="cursor-pointer hover:text-logoColorPrimary transition-all"
-          />
-          <FaFacebook
-            size={25}
-            className="cursor-pointer hover:text-logoColorPrimary transition-all"
-          />
-          <FaSkype
-            size={25}
-            className="cursor-pointer hover:text-logoColorPrimary transition-all"
-          />
+          <Link
+            href={"https://www.linkedin.com/company/104358802/admin/dashboard/"}
+            target="_blank"
+          >
+            <FaLinkedin
+              size={25}
+              className="cursor-pointer hover:text-logoColorPrimary transition-all"
+            />
+          </Link>
+          <Link
+            href={"https://www.instagram.com/nextline.solutions/"}
+            target="_blank"
+          >
+            <FaInstagram
+              size={25}
+              className="cursor-pointer hover:text-logoColorPrimary transition-all"
+            />
+          </Link>
         </div>
       </div>
     </div>

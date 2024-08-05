@@ -19,8 +19,12 @@ const Portfolio = () => {
         </div>
         <div>
           <div className="flex items-center px-5 py-2 bg-logoColorPrimary text-white rounded-full cursor-pointer">
-            <button className="me-3 text-xs md:text-sm">View All</button>{" "}
-            <FaArrowRightLong />{" "}
+            <Link href={"/portfolio"} className="me-3 text-xs md:text-sm">
+              View All
+            </Link>{" "}
+            <Link href={"/portfolio"}>
+              <FaArrowRightLong />
+            </Link>
           </div>
         </div>
       </div>

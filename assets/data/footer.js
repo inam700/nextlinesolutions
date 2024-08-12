@@ -18,6 +18,7 @@ export const footerLinks = [
       { href: "/services", name: "Cloud Services" },
       { href: "/services", name: "Blockchain Services" },
       { href: "/services", name: "E-Commerce Solutions" },
+      { href: "/services", name: "Digital Marketing" },
     ],
   },
   {

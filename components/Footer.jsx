@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaSkype,
+  FaWhatsapp,
 } from "react-icons/fa6";
 import { FaMobileAlt } from "react-icons/fa";
 import { footerLinks } from "@/assets/data/footer";
@@ -112,6 +113,12 @@ const Footer = () => {
             target="_blank"
           >
             <FaInstagram
+              size={25}
+              className="cursor-pointer hover:text-logoColorPrimary transition-all"
+            />
+          </Link>
+          <Link href={"https://wa.me/923129609459"} target="_blank">
+            <FaWhatsapp
               size={25}
               className="cursor-pointer hover:text-logoColorPrimary transition-all"
             />

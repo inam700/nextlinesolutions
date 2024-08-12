@@ -60,6 +60,16 @@ export const navbarData = [
           { href: "/services", name: "Kubernetes" },
         ],
       },
+      {
+        typeName: "Digital Marketing",
+        types: [
+          { href: "/services", name: "Search Engine Optimization" },
+          { href: "/services", name: "Social Media Marketing" },
+          { href: "/services", name: "Content Marketing" },
+          { href: "/services", name: "Advertising" },
+          { href: "/services", name: "Email Marketing" },
+        ],
+      },
     ],
   },
 ];

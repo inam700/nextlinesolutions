@@ -33,6 +33,10 @@ const Header = () => {
     };
   }, []);
 
+  const handleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <header
       style={{
@@ -62,7 +66,7 @@ const Header = () => {
         <div className="flex lg:hidden">
           {mobileMenuOpen ? (
             <FaXmark
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={handleMobileMenu}
               aria-hidden="true"
               className="h-6 w-6"
             />
@@ -70,7 +74,7 @@ const Header = () => {
             <FaBars
               aria-hidden="true"
               className="h-6 w-6"
-              onClick={() => setMobileMenuOpen(true)}
+              onClick={handleMobileMenu}
             />
           )}
         </div>
@@ -82,6 +86,7 @@ const Header = () => {
               mainLink={data.mainLink}
               menuType={data.menuType}
               links={data.links}
+              handleChange={handleMobileMenu}
             />
           ))}
 
@@ -110,9 +115,24 @@ const Header = () => {
               className="w-full h-full mt-28 px-10 text-white"
             >
               <div className="flex flex-col gap-5">
-                <NavLink type="navbar" link={"/about"} text="About us" />
-                <NavLink type="navbar" link={"/services"} text="Services" />
-                <NavLink type="navbar" link={"/portfolio"} text="Work" />
+                <NavLink
+                  type="navbar"
+                  link={"/about"}
+                  text="About us"
+                  handleChange={handleMobileMenu}
+                />
+                <NavLink
+                  type="navbar"
+                  link={"/services"}
+                  text="Services"
+                  handleChange={handleMobileMenu}
+                />
+                <NavLink
+                  type="navbar"
+                  link={"/portfolio"}
+                  text="Work"
+                  handleChange={handleMobileMenu}
+                />
               </div>
 
               <div className="mt-20">

@@ -8,6 +8,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaSkype,
+  FaWhatsapp,
 } from "react-icons/fa6";
 import { useForm, ValidationError } from "@formspree/react";
 
@@ -64,7 +65,7 @@ const Contact = () => {
 
             <div className="flex items-center gap-5 mb-5">
               <FaMobileAlt size={25} className="text-logoColorPrimary" />
-              <p className="text-lg">+92 (334) 0041777</p>
+              <p className="text-lg">+92 (312) 9609459</p>
             </div>
             <div className="flex gap-5 mt-20">
               <Link
@@ -83,6 +84,12 @@ const Contact = () => {
                 target="_blank"
               >
                 <FaInstagram
+                  size={25}
+                  className="cursor-pointer hover:text-logoColorPrimary transition-all"
+                />
+              </Link>
+              <Link href={"https://wa.me/923129609459"} target="_blank">
+                <FaWhatsapp
                   size={25}
                   className="cursor-pointer hover:text-logoColorPrimary transition-all"
                 />

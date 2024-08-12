@@ -143,9 +143,27 @@ export const servicesForPage = [
     techs: ["AWS", "GCloud", "Kubernetes"],
   },
   {
-    name: "Consultation Services",
+    name: "Digital Marketing Services",
     description:
-      "We guide businesses through the complexities of software selection and implementation. Our expert team analyzes your unique needs, recommends tailored solutions, and provides ongoing support to ensure a successful outcome. Whether you need to streamline operations, improve customer experiences, or drive innovation, we'll help you find the right software to achieve your goals. Partner with us for unbiased advice and a clear path to digital transformation.",
-    techs: [],
+      "Digital marketing isn't a solo journey. We're your trusted co-pilots, navigating the complexities and charting a course for success. Through collaboration and transparent communication, we'll craft a strategy that aligns with your vision and propels your brand forward. Let's achieve digital greatness together.",
+    techs: [
+      "SEO",
+      "Social Media Marketing",
+      "Content Marketing",
+      "Advertising",
+      "Email Marketing",
+    ],
   },
+  // {
+  //   name: "Digital Marketing Services",
+  //   description:
+  //     "We guide businesses through the complexities of software selection and implementation. Our expert team analyzes your unique needs, recommends tailored solutions, and provides ongoing support to ensure a successful outcome. Whether you need to streamline operations, improve customer experiences, or drive innovation, we'll help you find the right software to achieve your goals. Partner with us for unbiased advice and a clear path to digital transformation.",
+  //   techs: [
+  //     "SEO",
+  //     "Social Media Marketing",
+  //     "Content Marketing",
+  //     "Advertising",
+  //     "Email Marketing",
+  //   ],
+  // },
 ];

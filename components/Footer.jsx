@@ -44,7 +44,7 @@ const Footer = () => {
 
             <div className="flex items-center gap-5 mb-2">
               <FaMobileAlt size={25} className="text-logoColorPrimary" />
-              <p className="text-sm">+92 (334) 0041777</p>
+              <p className="text-sm">+92 (370) 6036749</p>
             </div>
           </div>
           {footerLinks.map((item, index) =>

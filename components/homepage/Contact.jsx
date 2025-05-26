@@ -65,7 +65,7 @@ const Contact = () => {
 
             <div className="flex items-center gap-5 mb-5">
               <FaMobileAlt size={25} className="text-logoColorPrimary" />
-              <p className="text-lg">+92 (312) 9609459</p>
+              <p className="text-lg">+92 (370) 6036749</p>
             </div>
             <div className="flex gap-5 mt-20">
               <Link

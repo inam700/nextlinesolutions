@@ -88,7 +88,7 @@ const Contact = () => {
                   className="cursor-pointer hover:text-logoColorPrimary transition-all"
                 />
               </Link>
-              <Link href={"https://wa.me/923129609459"} target="_blank">
+              <Link href={"https://wa.me/923706036749"} target="_blank">
                 <FaWhatsapp
                   size={25}
                   className="cursor-pointer hover:text-logoColorPrimary transition-all"

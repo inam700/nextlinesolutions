@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { FaMobileAlt } from "react-icons/fa";
 import {
   FaEnvelope,
@@ -10,23 +10,70 @@ import {
   FaSkype,
   FaWhatsapp,
 } from "react-icons/fa6";
-import { useForm, ValidationError } from "@formspree/react";
 
 import servicebg from "@/assets/images/service-bg-1.png";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { send } from "@emailjs/browser";
 
-// re_ey8UKVde_ELQD9uZoTJVNT5jQ2Jvo4hPF ----- resend
+const contactSchema = z.object({
+  email: z
+    .string({
+      required_error: "Required",
+    })
+    .min(1, "Required")
+    .email("Enter a valid email address"),
+  name: z
+    .string({
+      required_error: "Required",
+    })
+    .min(1, "Required"),
+  phone: z
+    .string({
+      required_error: "Required",
+    })
+    .min(1, "Required")
+    .min(11, "Phone number must be at least 11 digits")
+    .max(15, "Phone number too long"),
+  message: z
+    .string({
+      required_error: "Required",
+    })
+    .min(1, "Required")
+    .min(10, "Message must be at least 10 characters"),
+});
 
-// K6UQU6UW457WSCLQULASCQVY ----- mailgrid
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("mzzpryez");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmitForm = async () => {
-    await handleSubmit();
-    if (state.succeeded) {
-      toast.success("Request Submitted. Thank You!");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = async (data) => {
+    setLoading(true);
+
+    try {
+      await send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
+      toast.success("Message sent successfully!");
+      reset();
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error("Failed to send message. Try again later.");
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -97,54 +144,64 @@ const Contact = () => {
             </div>
           </div>
           <div className="group relative md:col-span-2 p-10 bg-white">
-            <form className="w-full">
+            <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
               <div className="grid lg:grid-cols-2 gap-10 mb-5">
                 <div className="group relative flex flex-col gap-2 w-full">
                   <label className="font-semibold text-sm">Full Name</label>
                   <input
-                    id="name"
                     type="text"
-                    name="name"
+                    {...register("name")}
                     className="border px-5 py-2 outline-none"
                   />
+                  {errors.name && (
+                    <p className="text-red-500 text-xs">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
+
                 <div className="group relative flex flex-col gap-2 w-full">
                   <label className="font-semibold text-sm">Organization</label>
                   <input
-                    id="organization"
                     name="organization"
                     type="text"
                     className="border px-5 py-2 outline-none"
                   />
                 </div>
+
                 <div className="group relative flex flex-col gap-2 w-full">
                   <label className="font-semibold text-sm">Phone Number</label>
-                  <input type="tel" className="border px-5 py-2 outline-none" />
-                </div>
-                <div className="group relative flex flex-col gap-2 w-full">
-                  <label
-                    id="phone"
-                    name="phone"
-                    className="font-semibold text-sm"
-                  >
-                    Email
-                  </label>
                   <input
-                    id="email"
-                    type="email"
-                    name="email"
+                    type="tel"
+                    {...register("phone")}
                     className="border px-5 py-2 outline-none"
                   />
+                  {errors.phone && (
+                    <p className="text-red-500 text-xs">
+                      {errors.phone.message}
+                    </p>
+                  )}
                 </div>
+
+                <div className="group relative flex flex-col gap-2 w-full">
+                  <label className="font-semibold text-sm">Email</label>
+                  <input
+                    type="email"
+                    {...register("email")}
+                    className="border px-5 py-2 outline-none"
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 text-xs">
+                      {errors.email.message}
+                    </p>
+                  )}
+                </div>
+
                 <div className="group relative flex flex-col gap-2 w-full md:col-span-2">
                   <label className="font-semibold text-sm">
                     Area of Interest
                   </label>
-                  <select
-                    name="area"
-                    id="area"
-                    className="border px-5 py-2 outline-none"
-                  >
+                  <select name="area" className="border px-5 py-2 outline-none">
                     <option selected disabled>
                       Select
                     </option>
@@ -157,22 +214,28 @@ const Contact = () => {
                     <option value="blockchain">Blockchain</option>
                   </select>
                 </div>
+
                 <div className="group relative flex flex-col gap-2 w-full md:col-span-2">
                   <label className="font-semibold text-sm">Message</label>
                   <textarea
-                    id="message"
-                    name="message"
                     rows={7}
+                    {...register("message")}
                     className="border px-5 py-2 outline-none"
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-xs">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className="flex justify-end">
                 <button
-                  onClick={() => handleSubmitForm}
+                  type="submit"
+                  disabled={loading}
                   className="text-sm rounded-full font-bold px-16 py-3 text-white bg-logoColorPrimary before:ease relative overflow-hidden transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-slate-600 before:opacity-10 before:duration-700 hover:shadow-slate-800 hover:before:-translate-x-52"
                 >
-                  Submit
+                  {loading ? "Sending..." : "Submit"}
                 </button>
               </div>
             </form>
